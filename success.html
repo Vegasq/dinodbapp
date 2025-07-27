@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful - DinoDB</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .success-container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 40px;
+            text-align: center;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .success-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+        .transaction-id {
+            font-family: monospace;
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-icon">✅</div>
+        <h1>Payment Successful!</h1>
+        <p>Thank you for purchasing DinoDB Commercial License.</p>
+        
+        <div class="transaction-id">
+            Transaction ID: <span id="transaction-id">Loading...</span>
+        </div>
+        
+        <p><strong>Next Steps:</strong></p>
+        <ol style="text-align: left; display: inline-block;">
+            <li>Check your email for the download link and license key</li>
+            <li>Download the commercial version of DinoDB</li>
+            <li>Enter your license key when prompted in the app</li>
+        </ol>
+        
+        <p><em>License keys are typically delivered within 5-10 minutes.<br>
+        If you don't receive an email, please contact support with your transaction ID.</em></p>
+        
+        <a href="/" class="btn btn-primary">Back to Home</a>
+    </div>
+
+    <script>
+        // Extract transaction ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const transactionId = urlParams.get('tx') || 'Not available';
+        document.getElementById('transaction-id').textContent = transactionId;
+        
+        // In a real implementation, you would:
+        // 1. Send transaction ID to your backend
+        // 2. Generate/retrieve license key
+        // 3. Display key or send via email
+    </script>
+</body>
+</html>
