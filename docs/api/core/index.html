@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="DinoDB Team">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Core Features &mdash; DinoDB Documentation</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../.." class="site-name"> DinoDB Documentation</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="../..">Home</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Getting Started</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../getting-started/overview/">Overview</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../getting-started/installation/">Installation</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../getting-started/quickstart/">Quick Start</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">User Guide</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/account-management/">Account Management</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/table-operations/">Table Operations</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/query-builder/">Query Builder</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/monitoring/">Monitoring & Metrics</a></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+    </div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../.." class="site-name"> DinoDB Documentation</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    
+</ul>
+</nav>
+                <div id="content"><h1 id="core-features">Core Features<a class="headerlink" href="#core-features" title="Permanent link">&para;</a></h1>
+<p>Overview of DinoDB's main features and capabilities.</p>
+<h2 id="account-management">Account Management<a class="headerlink" href="#account-management" title="Permanent link">&para;</a></h2>
+<p>DinoDB supports multiple AWS account configurations:</p>
+<h3 id="aws-credentials-file-integration">AWS Credentials File Integration<a class="headerlink" href="#aws-credentials-file-integration" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Automatically discovers accounts from <code>~/.aws/credentials</code></li>
+<li>Read-only access to existing AWS profiles</li>
+<li>Visual distinction with document icons</li>
+</ul>
+<h3 id="secure-account-storage">Secure Account Storage<a class="headerlink" href="#secure-account-storage" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Store accounts directly in DinoDB</li>
+<li>Credentials secured in macOS Keychain</li>
+<li>Full editing and management capabilities</li>
+</ul>
+<h3 id="account-features">Account Features<a class="headerlink" href="#account-features" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Multiple account support</li>
+<li>Region-specific configurations</li>
+<li>Tag-based organization</li>
+<li>Connection status indicators</li>
+</ul>
+<h2 id="table-operations">Table Operations<a class="headerlink" href="#table-operations" title="Permanent link">&para;</a></h2>
+<h3 id="data-viewing">Data Viewing<a class="headerlink" href="#data-viewing" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Table View</strong>: Spreadsheet-like interface with sortable columns</li>
+<li><strong>JSON View</strong>: Syntax-highlighted DynamoDB JSON format</li>
+<li><strong>Pagination</strong>: Configurable page sizes (10-250 items)</li>
+<li><strong>Search &amp; Filter</strong>: Find specific tables and data</li>
+</ul>
+<h3 id="crud-operations">CRUD Operations<a class="headerlink" href="#crud-operations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Create</strong>: Add new items with form builder or JSON editor</li>
+<li><strong>Read</strong>: Browse and search table data efficiently</li>
+<li><strong>Update</strong>: Edit items with inline editing or detail views</li>
+<li><strong>Delete</strong>: Remove items with confirmation dialogs</li>
+</ul>
+<h3 id="advanced-querying">Advanced Querying<a class="headerlink" href="#advanced-querying" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Query Builder</strong>: Visual interface for complex queries</li>
+<li><strong>Filter Expressions</strong>: Attribute-based filtering</li>
+<li><strong>Index Utilization</strong>: Automatic optimization suggestions</li>
+<li><strong>Export Options</strong>: Multiple format support</li>
+</ul>
+<h2 id="monitoring-metrics">Monitoring &amp; Metrics<a class="headerlink" href="#monitoring-metrics" title="Permanent link">&para;</a></h2>
+<h3 id="cloudwatch-integration">CloudWatch Integration<a class="headerlink" href="#cloudwatch-integration" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Real-time performance metrics from AWS CloudWatch</li>
+<li>Interactive charts with multiple time ranges</li>
+<li>Automatic refresh every 60 seconds</li>
+<li>Historical trend analysis</li>
+</ul>
+<h3 id="metric-categories">Metric Categories<a class="headerlink" href="#metric-categories" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Capacity</strong>: Read/write capacity utilization</li>
+<li><strong>Performance</strong>: Latency and throughput metrics</li>
+<li><strong>Errors</strong>: User and system error tracking</li>
+<li><strong>Storage</strong>: Item count and table size metrics</li>
+</ul>
+<h3 id="alert-system">Alert System<a class="headerlink" href="#alert-system" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Configurable threshold-based alerts</li>
+<li>Multiple severity levels (Info, Warning, Critical)</li>
+<li>Native macOS notifications</li>
+<li>Visual alert indicators in dashboard</li>
+</ul>
+<h2 id="user-interface">User Interface<a class="headerlink" href="#user-interface" title="Permanent link">&para;</a></h2>
+<h3 id="modern-design">Modern Design<a class="headerlink" href="#modern-design" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Native macOS interface following Human Interface Guidelines</li>
+<li>Clean, intuitive layout optimized for productivity</li>
+<li>Responsive design adapting to window sizes</li>
+<li>Smooth animations and transitions</li>
+</ul>
+<h3 id="theme-support">Theme Support<a class="headerlink" href="#theme-support" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Light, Dark, and System theme options</li>
+<li>Live theme switching without restart</li>
+<li>Consistent styling across all views</li>
+<li>Accessibility support</li>
+</ul>
+<h3 id="navigation">Navigation<a class="headerlink" href="#navigation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Three-column split view layout</li>
+<li>Sidebar for accounts and tables</li>
+<li>Context-sensitive detail views</li>
+<li>Keyboard shortcut support</li>
+</ul>
+<p><em>This is user-facing documentation focused on features and capabilities</em></p></div>
+                <footer>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../search/main.js"></script>
+</body>
+
+</html>

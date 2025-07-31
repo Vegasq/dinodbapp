@@ -24,7 +24,7 @@
                     <li><a href="#features">Features</a></li>
                     <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#screenshots">Screenshots</a></li>
-                    <li><a href="#download">Download</a></li>
+                    <li><a href="#pricing">Download</a></li>
                 </ul>
             </div>
         </div>
@@ -40,7 +40,7 @@
                     <button onclick="startCommercialTrial()" class="btn btn-primary">Try DinoDB Free</button>
                     <a href="#pricing" class="btn btn-secondary">View Pricing</a>
                 </div>
-                <p class="hero-requirements">Requires macOS 14.0 or later</p>
+                <p class="hero-requirements">Requires macOS 14.0 or later • Universal binary for Intel and Apple Silicon</p>
             </div>
         </div>
     </section>
@@ -93,7 +93,7 @@
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
                     <h3>Real-time Metrics</h3>
-                    <p>CloudWatch integration with interactive charts, performance monitoring, and configurable alerts for capacity, latency, and errors.</p>
+                    <p>Interactive charts, performance monitoring, and configurable alerts for capacity, latency, and errors.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🎨</div>
@@ -211,7 +211,7 @@
                                 <div class="slide-text">
                                     <h3>Performance Monitoring</h3>
                                     <ul class="slide-features">
-                                        <li>Real-time CloudWatch metrics integration</li>
+                                        <li>Real-time metrics integration</li>
                                         <li>Interactive charts and trend analysis</li>
                                         <li>Capacity utilization tracking</li>
                                         <li>Performance optimization insights</li>
@@ -289,7 +289,7 @@
                     <p class="pricing-description">Perfect for individual developers and personal projects</p>
                     <ul class="pricing-features">
                         <li>Unlimited AWS accounts</li>
-                        <li>Full CloudWatch integration</li>
+                        <li>Full metrics integration</li>
                         <li>Metric alerts & notifications</li>
                         <li>All core features</li>
                         <li>Personal use only</li>
@@ -298,7 +298,7 @@
                     <button onclick="downloadPersonalVersion()" class="btn btn-secondary pricing-btn">Download Free</button>
                 </div>
                 <div class="pricing-card featured">
-                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-badge">Most Value</div>
                     <h3 class="pricing-tier">Commercial</h3>
                     <div class="pricing-amount">
                         <span class="price">$5</span>
@@ -331,7 +331,7 @@
                 </div>
                 <div class="screenshot-item">
                     <img src="screenshots/performance_view.png" alt="Performance Metrics Dashboard" class="screenshot-image clickable-screenshot" onclick="openLightbox(this)">
-                    <p class="screenshot-caption">Monitor table performance with real-time CloudWatch metrics</p>
+                    <p class="screenshot-caption">Monitor table performance with real-time metrics</p>
                 </div>
                 <div class="screenshot-item">
                     <img src="screenshots/json_view.png" alt="JSON View Mode" class="screenshot-image clickable-screenshot" onclick="openLightbox(this)">
@@ -353,65 +353,23 @@
         </div>
     </section>
 
-    <!-- Download Section -->
-    <section id="download" class="download">
-        <div class="container">
-            <div class="download-content">
-                <h2>Get Started with DinoDB</h2>
-                <p class="download-subtitle">Start your free trial or download for personal use</p>
-                <div class="download-options">
-                    <div class="download-card">
-                        <h3>Free Trial</h3>
-                        <p>Try DinoDB free for 14 days. No credit card required.</p>
-                        <button onclick="startCommercialTrial()" class="btn btn-primary">Start Free Trial</button>
-                        <p class="download-note">macOS 14.0+ required • Includes all features</p>
-                    </div>
-                    <div class="download-card">
-                        <h3>Personal Use</h3>
-                        <p>Free forever for individual developers and personal projects.</p>
-                        <button onclick="downloadPersonalVersion()" class="btn btn-secondary">Download for Personal Use</button>
-                        <p class="download-note">Not for commercial use • Full feature set</p>
-                    </div>
-                </div>
-                <div class="download-faq">
-                    <h3>Frequently Asked Questions</h3>
-                    <div class="faq-item">
-                        <h4>What's the difference between Personal and Commercial licenses?</h4>
-                        <p>The Personal license is free forever but limited to non-commercial use and doesn't include AWS SSO integration. The Commercial license ($5/seat/month) allows business use, includes AWS SSO, and priority support.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h4>How does per-seat pricing work?</h4>
-                        <p>Each user who needs DinoDB requires a commercial license. For example, a team of 10 developers would need 10 seats at $5/seat/month. Volume discounts are available for larger teams.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h4>Can I try before I buy?</h4>
-                        <p>Yes! We offer a 14-day free trial with all features unlocked. No credit card required.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Documentation Section -->
     <section class="documentation">
         <div class="container">
             <h2 class="section-title">Documentation & Support</h2>
             <div class="docs-grid">
-                <a href="#" class="doc-card">
+                <a href="https://dinodb.app/docs" class="doc-card">
                     <h3>Getting Started</h3>
                     <p>Quick start guide and initial setup instructions</p>
                 </a>
-                <a href="#" class="doc-card">
+                <a href="https://dinodb.app/docs/user-guide/account-management/" class="doc-card">
                     <h3>User Guide</h3>
-                    <p>Complete documentation for all features</p>
+                    <p>Complete documentation for all features and functionality</p>
                 </a>
-                <a href="#" class="doc-card">
-                    <h3>Video Tutorials</h3>
-                    <p>Step-by-step video guides for common tasks</p>
-                </a>
-                <a href="#" class="doc-card">
-                    <h3>Support Center</h3>
-                    <p>FAQs, troubleshooting, and contact support</p>
+                <a href="https://github.com/Vegasq/dinodbapp/issues" class="doc-card">
+                    <h3>Support</h3>
+                    <p>Report issues, request features, and get help</p>
                 </a>
             </div>
         </div>
@@ -433,8 +391,7 @@
                     <ul>
                         <li><a href="#features">Features</a></li>
                         <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#download">Download</a></li>
-                        <li><a href="#">Support</a></li>
+                        <li><a href="https://github.com/Vegasq/dinodbapp/issues">Support</a></li>
                     </ul>
                 </div>
                 <div class="footer-tech">
@@ -443,12 +400,11 @@
                         <li>SwiftUI</li>
                         <li>AWS SDK for Swift</li>
                         <li>SwiftData</li>
-                        <li>CloudWatch</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 DinoDB. All rights reserved. <a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></p>
+                <p>&copy; 2025 DinoDB. All rights reserved. <a href="LICENSE.txt">License</a> • <a href="PRIVACY_POLICY.md">Privacy Policy</a> • <a href="TERMS_OF_SERVICE.md">Terms of Service</a></p>
             </div>
         </div>
     </footer>
@@ -507,14 +463,6 @@
         // Auto-advance carousel every 6 seconds
         setInterval(nextSlide, 6000);
 
-        // Keyboard navigation
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'ArrowLeft') {
-                previousSlide();
-            } else if (e.key === 'ArrowRight') {
-                nextSlide();
-            }
-        });
 
         // Touch/swipe support for mobile
         let startX = 0;
@@ -608,10 +556,11 @@
             lightboxCaption.textContent = currentImage.alt;
         }
 
-        // Keyboard navigation for lightbox
+        // Combined keyboard navigation
         document.addEventListener('keydown', function(e) {
             const lightbox = document.getElementById('lightbox');
             if (lightbox.style.display === 'block') {
+                // Lightbox is open - handle lightbox navigation only
                 if (e.key === 'Escape') {
                     closeLightbox();
                 } else if (e.key === 'ArrowLeft') {
@@ -619,6 +568,63 @@
                 } else if (e.key === 'ArrowRight') {
                     nextImage();
                 }
+                return; // Don't process other keys when lightbox is open
+            }
+            
+            // Handle konami code (only when lightbox is closed)
+            if (e.keyCode === konamiCode[konamiIndex]) {
+                konamiIndex++;
+                if (konamiIndex === konamiCode.length) {
+                    window.konamiUnlocked = true;
+                    konamiIndex = 0;
+                    // Show success message
+                    const successMessage = document.createElement('div');
+                    successMessage.style.cssText = `
+                        position: fixed;
+                        top: 20px;
+                        right: 20px;
+                        background: #10b981;
+                        color: white;
+                        padding: 16px 24px;
+                        border-radius: 8px;
+                        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+                        z-index: 10000;
+                        max-width: 400px;
+                        font-family: Inter, sans-serif;
+                    `;
+                    successMessage.innerHTML = `
+                        <div style="font-weight: 600; margin-bottom: 8px;">🎮 Testing Mode Activated!</div>
+                        <div style="font-size: 14px; opacity: 0.9;">
+                            Premium purchase functionality is now available for testing.
+                        </div>
+                        <button onclick="this.parentElement.remove()" style="
+                            position: absolute;
+                            top: 8px;
+                            right: 8px;
+                            background: none;
+                            border: none;
+                            color: white;
+                            font-size: 18px;
+                            cursor: pointer;
+                            opacity: 0.7;
+                        " title="Close">×</button>
+                    `;
+                    document.body.appendChild(successMessage);
+                    setTimeout(() => {
+                        if (successMessage.parentElement) {
+                            successMessage.remove();
+                        }
+                    }, 5000);
+                }
+            } else {
+                konamiIndex = 0;
+            }
+            
+            // Handle carousel navigation
+            if (e.key === 'ArrowLeft') {
+                previousSlide();
+            } else if (e.key === 'ArrowRight') {
+                nextSlide();
             }
         });
 
@@ -658,9 +664,7 @@
                     items: [{ priceId: priceId, quantity: 1 }],
                     customer: email ? { email: email } : undefined,
                     settings: {
-                        successUrl: window.location.origin + '/success.html?tx={checkout_id}'
-                        // ,
-                        // errorUrl: window.location.origin + '/?error=checkout_failed'
+                        successUrl: window.location.origin + '/?success=true&tx={checkout_id}'
                     }
                 };
                 
@@ -677,8 +681,18 @@
             alert('Payment successful! Check your email for download instructions.');
         }
 
+        // Track konami code sequence
+        let konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]; // Up Up Down Down Left Right Left Right B A
+        let konamiIndex = 0;
+
         // Commercial license checkout
         function startCommercialTrial() {
+            // Check if konami code has been entered
+            if (!window.konamiUnlocked) {
+                alert('🚧 The premium version is not yet publicly available.\n\nWe\'re putting the finishing touches on the commercial features. Stay tuned for the official launch!\n\nFor early access or enterprise inquiries, please contact us.');
+                return;
+            }
+            
             // Check if Paddle is properly configured
             if (!window.Paddle || !window.Paddle.Checkout) {
                 alert('Payment system is being configured. Please contact support for commercial licensing.');
@@ -691,9 +705,119 @@
 
         // Personal download (free)
         function downloadPersonalVersion() {
-            // Handle free download
-            alert('Starting download... (Replace with actual download link)');
+            // Direct download of the free personal version
+            window.location.href = 'https://github.com/Vegasq/dinodbapp/releases/download/25.8.1/DinoDB.dmg';
         }
+
+        // Check URL parameters on page load
+        function checkUrlParameters() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const success = urlParams.get('success');
+            const error = urlParams.get('error');
+            const transactionId = urlParams.get('tx');
+
+            if (success === 'true') {
+                showPaymentSuccess(transactionId);
+                // Clean up URL parameters
+                window.history.replaceState({}, document.title, window.location.pathname);
+            } else if (error) {
+                showPaymentError(error);
+                // Clean up URL parameters
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+        }
+
+        function showPaymentSuccess(transactionId) {
+            // Create and show success message
+            const successMessage = document.createElement('div');
+            successMessage.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #10b981;
+                color: white;
+                padding: 16px 24px;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+                z-index: 10000;
+                max-width: 400px;
+                font-family: Inter, sans-serif;
+            `;
+            successMessage.innerHTML = `
+                <div style="font-weight: 600; margin-bottom: 8px;">Payment Successful! 🎉</div>
+                <div style="font-size: 14px; opacity: 0.9;">
+                    ${transactionId ? `Transaction ID: ${transactionId}<br>` : ''}
+                    Check your email for download instructions and receipt.
+                </div>
+                <button onclick="this.parentElement.remove()" style="
+                    position: absolute;
+                    top: 8px;
+                    right: 8px;
+                    background: none;
+                    border: none;
+                    color: white;
+                    font-size: 18px;
+                    cursor: pointer;
+                    opacity: 0.7;
+                " title="Close">×</button>
+            `;
+            
+            document.body.appendChild(successMessage);
+            
+            // Auto-remove after 10 seconds
+            setTimeout(() => {
+                if (successMessage.parentElement) {
+                    successMessage.remove();
+                }
+            }, 10000);
+        }
+
+        function showPaymentError(error) {
+            // Create and show error message
+            const errorMessage = document.createElement('div');
+            errorMessage.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #ef4444;
+                color: white;
+                padding: 16px 24px;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+                z-index: 10000;
+                max-width: 400px;
+                font-family: Inter, sans-serif;
+            `;
+            errorMessage.innerHTML = `
+                <div style="font-weight: 600; margin-bottom: 8px;">Payment Failed</div>
+                <div style="font-size: 14px; opacity: 0.9;">
+                    There was an issue processing your payment. Please try again or contact support.
+                </div>
+                <button onclick="this.parentElement.remove()" style="
+                    position: absolute;
+                    top: 8px;
+                    right: 8px;
+                    background: none;
+                    border: none;
+                    color: white;
+                    font-size: 18px;
+                    cursor: pointer;
+                    opacity: 0.7;
+                " title="Close">×</button>
+            `;
+            
+            document.body.appendChild(errorMessage);
+            
+            // Auto-remove after 10 seconds
+            setTimeout(() => {
+                if (errorMessage.parentElement) {
+                    errorMessage.remove();
+                }
+            }, 10000);
+        }
+
+        // Run parameter check when page loads
+        document.addEventListener('DOMContentLoaded', checkUrlParameters);
     </script>
 </body>
 </html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="DinoDB Team">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Monitoring & Metrics &mdash; DinoDB Documentation</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../.." class="site-name"> DinoDB Documentation</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="../..">Home</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Getting Started</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../getting-started/overview/">Overview</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../getting-started/installation/">Installation</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../getting-started/quickstart/">Quick Start</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">User Guide</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../account-management/">Account Management</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../table-operations/">Table Operations</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../query-builder/">Query Builder</a></li>
+    <li class="toctree-l2 current"><a class="nav-item current" href="./">Monitoring & Metrics</a>
+<ul class="subnav">
+<li class="toctree-l3"><a class="nav-item toc" href="#cloudwatch-integration">CloudWatch Integration</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#interactive-charts">Interactive Charts</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#metric-alerts">Metric Alerts</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#performance-monitoring">Performance Monitoring</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#alert-management">Alert Management</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#monitoring-best-practices">Monitoring Best Practices</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#custom-dashboards">Custom Dashboards</a></li>
+</ul></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+    </div>
+    <div class="previous"><a href="../query-builder/">&laquo; Previous</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../.." class="site-name"> DinoDB Documentation</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>User Guide</li>
+</ul>
+</nav>
+                <div id="content"><h1 id="monitoring-metrics">Monitoring &amp; Metrics<a class="headerlink" href="#monitoring-metrics" title="Permanent link">&para;</a></h1>
+<p>Real-time monitoring and alerting system integrated with AWS CloudWatch.</p>
+<p><img alt="Monitoring Dashboard Full" src="../../assets/screenshots/monitoring-dashboard-full.png" /></p>
+<h2 id="cloudwatch-integration">CloudWatch Integration<a class="headerlink" href="#cloudwatch-integration" title="Permanent link">&para;</a></h2>
+<h3 id="metrics-dashboard">Metrics Dashboard<a class="headerlink" href="#metrics-dashboard" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Real-time performance metrics</li>
+<li>Interactive charts using native SwiftUI Charts</li>
+<li>Multiple time ranges (1h, 6h, 24h, 7d)</li>
+<li>Automatic refresh every 60 seconds</li>
+</ul>
+<p><img alt="Metrics Dashboard" src="../../assets/screenshots/metrics-dashboard.png" /></p>
+<h3 id="supported-metrics">Supported Metrics<a class="headerlink" href="#supported-metrics" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Capacity Metrics</strong>: Read/Write capacity utilization</li>
+<li><strong>Performance Metrics</strong>: Latency, throttling events</li>
+<li><strong>Error Metrics</strong>: User errors, system errors</li>
+<li><strong>Storage Metrics</strong>: Item count, table size</li>
+</ul>
+<h2 id="interactive-charts">Interactive Charts<a class="headerlink" href="#interactive-charts" title="Permanent link">&para;</a></h2>
+<h3 id="chart-types">Chart Types<a class="headerlink" href="#chart-types" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Line charts for trend analysis</li>
+<li>Area charts for cumulative metrics</li>
+<li>Bar charts for discrete events</li>
+<li>Combo charts for correlated metrics</li>
+</ul>
+<h3 id="chart-features">Chart Features<a class="headerlink" href="#chart-features" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Zoom and pan capabilities</li>
+<li>Data point hover information</li>
+<li>Export to image formats</li>
+<li>Time range selection</li>
+</ul>
+<h3 id="visual-indicators">Visual Indicators<a class="headerlink" href="#visual-indicators" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Trend arrows with color coding</li>
+<li>Threshold breach highlights</li>
+<li>Performance status badges</li>
+<li>Capacity utilization warnings</li>
+</ul>
+<p><img alt="Performance Trends" src="../../assets/screenshots/performance-trends.png" /></p>
+<h2 id="metric-alerts">Metric Alerts<a class="headerlink" href="#metric-alerts" title="Permanent link">&para;</a></h2>
+<h3 id="alert-configuration">Alert Configuration<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Configurable thresholds for all metrics</li>
+<li>Multiple severity levels (Info, Warning, Critical)</li>
+<li>Custom alert names and descriptions</li>
+<li>Flexible time windows</li>
+</ul>
+<p><img alt="Alert Configuration Detailed" src="../../assets/screenshots/alert-configuration-detailed.png" /></p>
+<p><img alt="Setup Alerts" src="../../assets/screenshots/setup-alerts.png" /></p>
+<h3 id="alert-types">Alert Types<a class="headerlink" href="#alert-types" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Threshold Alerts</strong>: Trigger when metric exceeds limit</li>
+<li><strong>Trend Alerts</strong>: Detect unusual patterns</li>
+<li><strong>Composite Alerts</strong>: Multiple condition combinations</li>
+<li><strong>Anomaly Detection</strong>: Machine learning-based alerts</li>
+</ul>
+<h3 id="notification-system">Notification System<a class="headerlink" href="#notification-system" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Native macOS notifications</li>
+<li>Visual alert banners in dashboard</li>
+<li>Alert history and acknowledgment</li>
+<li>Escalation procedures</li>
+</ul>
+<p><img alt="Alert Notifications" src="../../assets/screenshots/alert-notifications.png" /></p>
+<h2 id="performance-monitoring">Performance Monitoring<a class="headerlink" href="#performance-monitoring" title="Permanent link">&para;</a></h2>
+<h3 id="capacity-tracking">Capacity Tracking<a class="headerlink" href="#capacity-tracking" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Read/write capacity utilization</li>
+<li>Auto-scaling recommendations</li>
+<li>Cost optimization suggestions</li>
+<li>Burst capacity monitoring</li>
+</ul>
+<h3 id="latency-analysis">Latency Analysis<a class="headerlink" href="#latency-analysis" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Request latency percentiles</li>
+<li>Regional latency comparison</li>
+<li>Operation-type breakdown</li>
+<li>Historical trend analysis</li>
+</ul>
+<h3 id="error-monitoring">Error Monitoring<a class="headerlink" href="#error-monitoring" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Error rate tracking</li>
+<li>Error type categorization</li>
+<li>Root cause analysis hints</li>
+<li>Recovery recommendations</li>
+</ul>
+<h2 id="alert-management">Alert Management<a class="headerlink" href="#alert-management" title="Permanent link">&para;</a></h2>
+<h3 id="alert-dashboard">Alert Dashboard<a class="headerlink" href="#alert-dashboard" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Active alerts overview</li>
+<li>Alert severity distribution</li>
+<li>Recent alert history</li>
+<li>Acknowledgment status</li>
+</ul>
+<h3 id="alert-actions">Alert Actions<a class="headerlink" href="#alert-actions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Acknowledge alerts</li>
+<li>Snooze notifications</li>
+<li>Edit alert thresholds</li>
+<li>Disable/enable alerts</li>
+</ul>
+<h3 id="alert-history">Alert History<a class="headerlink" href="#alert-history" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Complete alert timeline</li>
+<li>Resolution tracking</li>
+<li>Performance impact correlation</li>
+<li>Trend analysis</li>
+</ul>
+<h2 id="monitoring-best-practices">Monitoring Best Practices<a class="headerlink" href="#monitoring-best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="threshold-setting">Threshold Setting<a class="headerlink" href="#threshold-setting" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Start with conservative thresholds</li>
+<li>Adjust based on normal usage patterns</li>
+<li>Account for traffic spikes</li>
+<li>Consider business impact</li>
+</ul>
+<h3 id="alert-fatigue-prevention">Alert Fatigue Prevention<a class="headerlink" href="#alert-fatigue-prevention" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use appropriate severity levels</li>
+<li>Implement alert suppression</li>
+<li>Group related alerts</li>
+<li>Regular threshold review</li>
+</ul>
+<h3 id="performance-optimization">Performance Optimization<a class="headerlink" href="#performance-optimization" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Monitor capacity trends</li>
+<li>Identify bottlenecks early</li>
+<li>Plan for growth</li>
+<li>Optimize query patterns</li>
+</ul>
+<h2 id="custom-dashboards">Custom Dashboards<a class="headerlink" href="#custom-dashboards" title="Permanent link">&para;</a></h2>
+<h3 id="dashboard-creation">Dashboard Creation<a class="headerlink" href="#dashboard-creation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Drag-and-drop metric selection</li>
+<li>Custom time ranges</li>
+<li>Layout customization</li>
+<li>Save and share dashboards</li>
+</ul>
+<h3 id="widget-types">Widget Types<a class="headerlink" href="#widget-types" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Single metric displays</li>
+<li>Comparison charts</li>
+<li>Status indicators</li>
+<li>Custom calculations</li>
+</ul>
+<p><em>This is a stub - full documentation will be generated from project source</em></p></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../query-builder/" title="Query Builder"><span>Previous</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../search/main.js"></script>
+</body>
+
+</html>

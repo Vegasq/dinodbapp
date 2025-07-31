@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="DinoDB Team">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Quick Start &mdash; DinoDB Documentation</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../.." class="site-name"> DinoDB Documentation</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="../..">Home</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Getting Started</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../overview/">Overview</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../installation/">Installation</a></li>
+    <li class="toctree-l2 current"><a class="nav-item current" href="./">Quick Start</a>
+<ul class="subnav">
+<li class="toctree-l3"><a class="nav-item toc" href="#step-1-add-your-first-aws-account">Step 1: Add Your First AWS Account</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#step-2-connect-to-your-account">Step 2: Connect to Your Account</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#step-3-browse-your-tables">Step 3: Browse Your Tables</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#step-4-perform-basic-operations">Step 4: Perform Basic Operations</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#step-5-explore-advanced-features">Step 5: Explore Advanced Features</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#common-tasks">Common Tasks</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#tips-for-success">Tips for Success</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#next-steps">Next Steps</a></li>
+</ul></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">User Guide</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/account-management/">Account Management</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/table-operations/">Table Operations</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/query-builder/">Query Builder</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/monitoring/">Monitoring & Metrics</a></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+    </div>
+    <div class="previous"><a href="../installation/">&laquo; Previous</a></div>
+    <div class="next"><a href="../../user-guide/account-management/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../.." class="site-name"> DinoDB Documentation</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>Getting Started</li>
+</ul>
+</nav>
+                <div id="content"><h1 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h1>
+<p>Get up and running with DinoDB in just a few minutes.</p>
+<h2 id="step-1-add-your-first-aws-account">Step 1: Add Your First AWS Account<a class="headerlink" href="#step-1-add-your-first-aws-account" title="Permanent link">&para;</a></h2>
+<h3 id="using-aws-credentials-file">Using AWS Credentials File<a class="headerlink" href="#using-aws-credentials-file" title="Permanent link">&para;</a></h3>
+<p>If you have <code>~/.aws/credentials</code> configured:
+1. Launch DinoDB
+2. Your AWS profiles will appear automatically</p>
+<p><img alt="AWS Profiles Discovered" src="../../assets/screenshots/aws-profiles-discovered.png" /></p>
+<ol>
+<li>Double-click a profile to connect</li>
+</ol>
+<h3 id="manual-account-setup">Manual Account Setup<a class="headerlink" href="#manual-account-setup" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click <strong>"Add Account"</strong></li>
+</ol>
+<p><img alt="Add Account Button" src="../../assets/screenshots/add-account-button.png" /></p>
+<ol>
+<li>Fill in the form:</li>
+<li><strong>Name</strong>: "My AWS Account"</li>
+<li><strong>Access Key ID</strong>: Your AWS access key</li>
+<li><strong>Secret Access Key</strong>: Your AWS secret key</li>
+<li><strong>Region</strong>: Your preferred region (e.g., us-east-1)</li>
+<li><strong>Tags</strong>: Optional labels (e.g., "production", "development")</li>
+</ol>
+<p><img alt="Add Account Form" src="../../assets/screenshots/quickstart-add-account-form.png" /></p>
+<ol>
+<li>Click **"Save"</li>
+</ol>
+<h2 id="step-2-connect-to-your-account">Step 2: Connect to Your Account<a class="headerlink" href="#step-2-connect-to-your-account" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Double-click your account card</li>
+</ol>
+<p><img alt="Double Click Connect" src="../../assets/screenshots/double-click-connect.png" /></p>
+<ol>
+<li>Wait for the connection to establish</li>
+</ol>
+<p><img alt="Connection Status" src="../../assets/screenshots/quickstart-connection-status.png" /></p>
+<ol>
+<li>You'll see your DynamoDB tables in the sidebar</li>
+</ol>
+<p><img alt="Tables List Connected" src="../../assets/screenshots/tables-list-connected.png" /></p>
+<h2 id="step-3-browse-your-tables">Step 3: Browse Your Tables<a class="headerlink" href="#step-3-browse-your-tables" title="Permanent link">&para;</a></h2>
+<h3 id="table-list-view">Table List View<a class="headerlink" href="#table-list-view" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Tables appear in the left sidebar</li>
+<li>Click any table to view its data</li>
+<li>Use the search box to filter tables</li>
+<li>Star tables to mark as favorites</li>
+</ul>
+<p><img alt="Table List Sidebar" src="../../assets/screenshots/table-list-sidebar.png" /></p>
+<h3 id="table-data-view">Table Data View<a class="headerlink" href="#table-data-view" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Table View</strong>: Spreadsheet-like interface</li>
+<li><strong>JSON View</strong>: Raw DynamoDB JSON format</li>
+<li><strong>Pagination</strong>: Navigate through large datasets</li>
+<li><strong>Sorting</strong>: Click column headers to sort</li>
+</ul>
+<p><img alt="Table View Mode" src="../../assets/screenshots/table-view-mode.png" /></p>
+<h2 id="step-4-perform-basic-operations">Step 4: Perform Basic Operations<a class="headerlink" href="#step-4-perform-basic-operations" title="Permanent link">&para;</a></h2>
+<h3 id="view-items">View Items<a class="headerlink" href="#view-items" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Select a table from the sidebar</li>
+<li>Browse items in the main view</li>
+<li>Click any item to see details</li>
+</ol>
+<h3 id="add-new-item">Add New Item<a class="headerlink" href="#add-new-item" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click <strong>"Add Item"</strong> button</li>
+</ol>
+<p><img alt="Add Item Button" src="../../assets/screenshots/add-item-button-toolbar.png" /></p>
+<ol>
+<li>Use the JSON editor or form fields</li>
+</ol>
+<p><img alt="Add Item Form" src="../../assets/screenshots/add-item-form-fields.png" /></p>
+<ol>
+<li>Click <strong>"Save"</strong> to create the item</li>
+</ol>
+<h3 id="edit-existing-item">Edit Existing Item<a class="headerlink" href="#edit-existing-item" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Double-click an item in the table</li>
+</ol>
+<p><img alt="Double Click Edit Item" src="../../assets/screenshots/double-click-edit-item.png" /></p>
+<ol>
+<li>Modify values in the detail view</li>
+</ol>
+<p><img alt="Edit Item Popup" src="../../assets/screenshots/edit-item-popup.png" /></p>
+<ol>
+<li>Click **"Save Changes"</li>
+</ol>
+<h3 id="delete-item">Delete Item<a class="headerlink" href="#delete-item" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Select an item</li>
+<li>Press <strong>Delete</strong> key or right-click &gt; Delete</li>
+</ol>
+<p><img alt="Right Click Delete" src="../../assets/screenshots/right-click-delete.png" /></p>
+<ol>
+<li>Confirm the deletion</li>
+</ol>
+<p><img alt="Delete Confirmation Dialog" src="../../assets/screenshots/delete-confirmation-dialog.png" /></p>
+<h2 id="step-5-explore-advanced-features">Step 5: Explore Advanced Features<a class="headerlink" href="#step-5-explore-advanced-features" title="Permanent link">&para;</a></h2>
+<h3 id="query-builder">Query Builder<a class="headerlink" href="#query-builder" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click <strong>"Query"</strong> in the toolbar</li>
+</ol>
+<p><img alt="Query Button Toolbar" src="../../assets/screenshots/query-button-toolbar.png" /></p>
+<ol>
+<li>Select your partition key</li>
+<li>Add conditions for sort keys</li>
+</ol>
+<p><img alt="Query Builder Interface" src="../../assets/screenshots/query-builder-interface.png" /></p>
+<ol>
+<li>Click **"Run Query"</li>
+</ol>
+<h3 id="monitoring-dashboard">Monitoring Dashboard<a class="headerlink" href="#monitoring-dashboard" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Select a table</li>
+<li>Click the <strong>"Metrics"</strong> tab</li>
+</ol>
+<p><img alt="Metrics Tab Click" src="../../assets/screenshots/metrics-tab-click.png" /></p>
+<ol>
+<li>View real-time CloudWatch metrics</li>
+</ol>
+<p><img alt="Metrics Dashboard" src="../../assets/screenshots/metrics-dashboard.png" /></p>
+<ol>
+<li>Set up alerts for important thresholds</li>
+</ol>
+<h3 id="settings-preferences">Settings &amp; Preferences<a class="headerlink" href="#settings-preferences" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click the gear icon in the toolbar</li>
+</ol>
+<p><img alt="Settings Icon Toolbar" src="../../assets/screenshots/settings-icon-toolbar.png" /></p>
+<ol>
+<li>Customize:</li>
+<li>Theme (Light/Dark/System)</li>
+<li>Default page sizes</li>
+<li>Auto-refresh intervals</li>
+<li>Keyboard shortcuts</li>
+</ol>
+<p><img alt="Settings Window" src="../../assets/screenshots/settings-window.png" /></p>
+<h2 id="common-tasks">Common Tasks<a class="headerlink" href="#common-tasks" title="Permanent link">&para;</a></h2>
+<h3 id="switching-between-accounts">Switching Between Accounts<a class="headerlink" href="#switching-between-accounts" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Click different account cards to switch contexts</li>
+<li>Each account maintains its own connection state</li>
+<li>Visual indicators show active connections</li>
+</ul>
+<h3 id="managing-multiple-regions">Managing Multiple Regions<a class="headerlink" href="#managing-multiple-regions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add separate accounts for different regions</li>
+<li>Or edit account settings to change regions</li>
+<li>Tables will refresh automatically</li>
+</ul>
+<h3 id="keyboard-shortcuts">Keyboard Shortcuts<a class="headerlink" href="#keyboard-shortcuts" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>⌘N</strong>: Add new item</li>
+<li><strong>⌘R</strong>: Refresh tables</li>
+<li><strong>⌘F</strong>: Focus search</li>
+<li><strong>Delete</strong>: Delete selected item</li>
+<li><strong>⌘,</strong>: Open settings</li>
+</ul>
+<h2 id="tips-for-success">Tips for Success<a class="headerlink" href="#tips-for-success" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Performance</p>
+<ul>
+<li>Use pagination for large tables</li>
+<li>Set appropriate page sizes in settings</li>
+<li>Use queries instead of scans when possible</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Security</p>
+<ul>
+<li>Never share AWS credentials</li>
+<li>Use IAM roles with minimal required permissions</li>
+<li>Regularly rotate access keys</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Monitoring</p>
+<ul>
+<li>Set up CloudWatch alerts for important metrics</li>
+<li>Monitor capacity utilization regularly</li>
+<li>Watch for throttling events</li>
+</ul>
+</div>
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<p>Now that you're familiar with the basics:</p>
+<ul>
+<li>Read the <a href="../../user-guide/account-management/">User Guide</a> for detailed features</li>
+<li>Learn about <a href="../../user-guide/account-management/">Account Management</a></li>
+<li>Explore <a href="../../user-guide/query-builder/">Advanced Querying</a></li>
+<li>Set up <a href="../../user-guide/monitoring/">Monitoring &amp; Alerts</a></li>
+</ul></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../installation/" title="Installation"><span>Previous</span></a></div>
+        <div class="next"><a href="../../user-guide/account-management/" title="Account Management"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../search/main.js"></script>
+</body>
+
+</html>

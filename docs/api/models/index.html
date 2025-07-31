@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="DinoDB Team">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Data Models &mdash; DinoDB Documentation</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../.." class="site-name"> DinoDB Documentation</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="../..">Home</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Getting Started</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../getting-started/overview/">Overview</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../getting-started/installation/">Installation</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../getting-started/quickstart/">Quick Start</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">User Guide</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/account-management/">Account Management</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/table-operations/">Table Operations</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/query-builder/">Query Builder</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/monitoring/">Monitoring & Metrics</a></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+    </div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../.." class="site-name"> DinoDB Documentation</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    
+</ul>
+</nav>
+                <div id="content"><h1 id="data-models">Data Models<a class="headerlink" href="#data-models" title="Permanent link">&para;</a></h1>
+<p>Understanding DinoDB's data structures and organization.</p>
+<h2 id="account-model">Account Model<a class="headerlink" href="#account-model" title="Permanent link">&para;</a></h2>
+<h3 id="account-properties">Account Properties<a class="headerlink" href="#account-properties" title="Permanent link">&para;</a></h3>
+<p>Each AWS account in DinoDB contains:</p>
+<ul>
+<li><strong>Name</strong>: Descriptive account identifier</li>
+<li><strong>Region</strong>: AWS region (e.g., us-east-1, us-west-2)</li>
+<li><strong>Description</strong>: Optional account description</li>
+<li><strong>Tags</strong>: Organizational labels for categorization</li>
+<li><strong>Created Date</strong>: When the account was added to DinoDB</li>
+</ul>
+<h3 id="account-types">Account Types<a class="headerlink" href="#account-types" title="Permanent link">&para;</a></h3>
+<p>DinoDB supports two types of accounts:</p>
+<h4 id="stored-accounts">Stored Accounts<a class="headerlink" href="#stored-accounts" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Saved directly in DinoDB</li>
+<li>Credentials stored securely in macOS Keychain</li>
+<li>Full editing capabilities</li>
+<li>Custom metadata support</li>
+</ul>
+<h4 id="aws-profile-accounts">AWS Profile Accounts<a class="headerlink" href="#aws-profile-accounts" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Read from <code>~/.aws/credentials</code> file</li>
+<li>Read-only access</li>
+<li>Automatically synchronized</li>
+<li>Marked with document icon</li>
+</ul>
+<h2 id="table-information">Table Information<a class="headerlink" href="#table-information" title="Permanent link">&para;</a></h2>
+<h3 id="table-metadata">Table Metadata<a class="headerlink" href="#table-metadata" title="Permanent link">&para;</a></h3>
+<p>DinoDB displays comprehensive table information:</p>
+<ul>
+<li><strong>Table Name</strong>: DynamoDB table identifier</li>
+<li><strong>Item Count</strong>: Approximate number of items</li>
+<li><strong>Table Size</strong>: Storage size in bytes</li>
+<li><strong>Key Schema</strong>: Partition and sort key definitions</li>
+<li><strong>Provisioned Throughput</strong>: Read/write capacity settings</li>
+<li><strong>Global Secondary Indexes</strong>: Additional query patterns</li>
+<li><strong>Local Secondary Indexes</strong>: Alternative sort key options</li>
+</ul>
+<h3 id="table-status">Table Status<a class="headerlink" href="#table-status" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Active</strong>: Table is available for operations</li>
+<li><strong>Creating</strong>: Table is being created</li>
+<li><strong>Updating</strong>: Table modification in progress</li>
+<li><strong>Deleting</strong>: Table deletion in progress</li>
+</ul>
+<h2 id="item-structure">Item Structure<a class="headerlink" href="#item-structure" title="Permanent link">&para;</a></h2>
+<h3 id="dynamodb-item-format">DynamoDB Item Format<a class="headerlink" href="#dynamodb-item-format" title="Permanent link">&para;</a></h3>
+<p>Items in DynamoDB use a specific attribute-value format:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;S&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user123&quot;</span><span class="p">},</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;S&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">},</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;N&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;30&quot;</span><span class="p">},</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">&quot;active&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;BOOL&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">},</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;SS&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;premium&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;verified&quot;</span><span class="p">]}</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="attribute-types">Attribute Types<a class="headerlink" href="#attribute-types" title="Permanent link">&para;</a></h3>
+<p>DinoDB supports all DynamoDB attribute types:</p>
+<ul>
+<li><strong>S</strong>: String</li>
+<li><strong>N</strong>: Number</li>
+<li><strong>B</strong>: Binary</li>
+<li><strong>SS</strong>: String Set</li>
+<li><strong>NS</strong>: Number Set</li>
+<li><strong>BS</strong>: Binary Set</li>
+<li><strong>M</strong>: Map (nested object)</li>
+<li><strong>L</strong>: List (array)</li>
+<li><strong>NULL</strong>: Null value</li>
+<li><strong>BOOL</strong>: Boolean</li>
+</ul>
+<h2 id="query-parameters">Query Parameters<a class="headerlink" href="#query-parameters" title="Permanent link">&para;</a></h2>
+<h3 id="query-configuration">Query Configuration<a class="headerlink" href="#query-configuration" title="Permanent link">&para;</a></h3>
+<p>When building queries, you can specify:</p>
+<ul>
+<li><strong>Partition Key</strong>: Required equality condition</li>
+<li><strong>Sort Key</strong>: Optional range or equality condition</li>
+<li><strong>Filter Expression</strong>: Additional item filtering</li>
+<li><strong>Projection Expression</strong>: Specific attributes to return</li>
+<li><strong>Index Name</strong>: Global or Local Secondary Index</li>
+<li><strong>Limit</strong>: Maximum items to return</li>
+<li><strong>Scan Forward</strong>: Sort order for results</li>
+</ul>
+<h3 id="pagination">Pagination<a class="headerlink" href="#pagination" title="Permanent link">&para;</a></h3>
+<p>DinoDB handles large result sets through:</p>
+<ul>
+<li><strong>Page Size</strong>: Configurable items per page</li>
+<li><strong>Last Evaluated Key</strong>: Continuation token</li>
+<li><strong>Total Count</strong>: Estimated total items</li>
+<li><strong>Page Navigation</strong>: Forward/backward controls</li>
+</ul>
+<p><em>This documentation describes the data structures users work with in DinoDB</em></p></div>
+                <footer>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../search/main.js"></script>
+</body>
+
+</html>

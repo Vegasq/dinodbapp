@@ -1,0 +1,4 @@
+# MkDocs Documentation Requirements
+mkdocs>=1.5.0
+mkdocs-ivory>=0.4.0
+pymdown-extensions>=10.0.0
