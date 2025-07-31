@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - DinoDB</title>
+    <meta name="description" content="Terms of Service for DinoDB - Professional DynamoDB client for macOS">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ2VQMHEC1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PZ2VQMHEC1');
+    </script>
+    
+    <style>
+        :root {
+            --primary-color: #007AFF;
+            --secondary-color: #5AC8FA;
+            --background-dark: #1C1C1E;
+            --background-light: #F2F2F7;
+            --text-primary: #FFFFFF;
+            --text-secondary: #8E8E93;
+            --card-background: #2C2C2E;
+            --gradient-primary: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--background-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+        
+        .logo img {
+            width: 32px;
+        }
+        
+        .back-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Main Content */
+        .main {
+            padding: 60px 0;
+        }
+        
+        .content {
+            background: var(--card-background);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+        }
+        
+        .page-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        
+        .legal-content {
+            max-width: none;
+        }
+        
+        .legal-content h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        
+        .legal-content h2 {
+            font-size: 1.5rem;
+            margin: 30px 0 15px 0;
+            color: var(--text-primary);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+        }
+        
+        .legal-content h3 {
+            font-size: 1.2rem;
+            margin: 25px 0 10px 0;
+            color: var(--secondary-color);
+        }
+        
+        .legal-content p {
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        .legal-content ul, .legal-content ol {
+            margin-bottom: 15px;
+            padding-left: 30px;
+        }
+        
+        .legal-content li {
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .legal-content strong {
+            color: var(--text-primary);
+        }
+        
+        .legal-content em {
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+        
+        .legal-content a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .legal-content a:hover {
+            text-decoration: underline;
+        }
+        
+        .effective-date {
+            background: rgba(0, 122, 255, 0.1);
+            border-left: 4px solid var(--primary-color);
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .contact-section {
+            background: rgba(90, 200, 250, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 1px solid rgba(90, 200, 250, 0.2);
+        }
+        
+        .footer-note {
+            text-align: center;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                padding: 25px;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .legal-content h1 {
+                font-size: 1.5rem;
+            }
+            
+            .legal-content h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="container nav">
+            <a href="index.html" class="logo">
+                <img src="dino.png" alt="DinoDB Logo">
+                DinoDB
+            </a>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <div class="content">
+                <h1 class="page-title">Terms of Service</h1>
+                <p class="page-subtitle">Legal terms and conditions for using DinoDB</p>
+                
+                <div class="legal-content">
+                    <div class="effective-date">
+                        <p><strong>Effective Date:</strong> January 2025<br>
+                        <strong>Last Updated:</strong> January 2025</p>
+                    </div>
+
+                    <h2>1. Acceptance of Terms</h2>
+                    <p>By downloading, installing, or using DinoDB ("the Software"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the Software.</p>
+
+                    <h2>2. Description of Service</h2>
+                    <p>DinoDB is a macOS application that provides a graphical interface for managing AWS DynamoDB tables. The Software connects to your AWS account using credentials you provide and allows you to view, query, and manage your DynamoDB data.</p>
+
+                    <h2>3. License Types</h2>
+
+                    <h3>3.1 Personal Use (Free)</h3>
+                    <ul>
+                        <li><strong>Scope</strong>: Individual, non-commercial use only</li>
+                        <li><strong>Cost</strong>: Free of charge</li>
+                        <li><strong>Restrictions</strong>: Cannot be used for business, commercial, or revenue-generating activities</li>
+                    </ul>
+
+                    <h3>3.2 Commercial Use (Paid License)</h3>
+                    <ul>
+                        <li><strong>Scope</strong>: Business, commercial, or organizational use</li>
+                        <li><strong>Cost</strong>: One-time license fee of $20</li>
+                        <li><strong>Features</strong>: Full access to all Software features including SSO authentication</li>
+                    </ul>
+
+                    <h2>4. Account and Security</h2>
+
+                    <h3>4.1 AWS Credentials</h3>
+                    <ul>
+                        <li>You are responsible for maintaining the security of your AWS credentials</li>
+                        <li>DinoDB stores credentials locally using macOS Keychain Services</li>
+                        <li>We do not have access to your AWS credentials or data</li>
+                    </ul>
+
+                    <h3>4.2 License Keys</h3>
+                    <ul>
+                        <li>Commercial users must maintain valid license keys</li>
+                        <li>License keys are non-transferable</li>
+                        <li>Sharing license keys is prohibited</li>
+                    </ul>
+
+                    <h2>5. Acceptable Use</h2>
+                    <p>You agree not to:</p>
+                    <ul>
+                        <li>Use the Software for any illegal or unauthorized purpose</li>
+                        <li>Attempt to reverse engineer, decompile, or disassemble the Software</li>
+                        <li>Distribute, sell, lease, or transfer the Software</li>
+                        <li>Use the Software to develop competing products</li>
+                        <li>Violate any applicable laws or regulations</li>
+                    </ul>
+
+                    <h2>6. Data and Privacy</h2>
+
+                    <h3>6.1 Your Data</h3>
+                    <ul>
+                        <li>Your AWS data remains in your AWS account and is not accessed by us</li>
+                        <li>The Software operates locally on your device</li>
+                        <li>We do not store or transmit your AWS data</li>
+                    </ul>
+
+                    <h3>6.2 Usage Information</h3>
+                    <ul>
+                        <li>We may collect anonymous usage statistics to improve the Software</li>
+                        <li>No personal or sensitive information is collected</li>
+                        <li>See our <a href="privacy.html">Privacy Policy</a> for details</li>
+                    </ul>
+
+                    <h2>7. Intellectual Property</h2>
+
+                    <h3>7.1 Ownership</h3>
+                    <ul>
+                        <li>DinoDB and all related intellectual property are owned by Mykola Yakovliev</li>
+                        <li>You receive only the license rights explicitly granted in these Terms</li>
+                        <li>All rights not expressly granted are reserved</li>
+                    </ul>
+
+                    <h3>7.2 Feedback</h3>
+                    <ul>
+                        <li>Any feedback or suggestions you provide may be used without restriction</li>
+                        <li>You waive any rights to compensation for feedback provided</li>
+                    </ul>
+
+                    <h2>8. Payment Terms (Commercial Users)</h2>
+
+                    <h3>8.1 License Fees</h3>
+                    <ul>
+                        <li>Commercial use requires payment of a one-time license fee of $20</li>
+                        <li>Payment must be completed before commercial use begins</li>
+                        <li>All fees are non-refundable unless required by law</li>
+                    </ul>
+
+                    <h3>8.2 License Validity</h3>
+                    <ul>
+                        <li>Commercial licenses are perpetual and do not expire</li>
+                        <li>License keys are tied to your purchase and are non-transferable</li>
+                        <li>Updates and support are included with your license purchase</li>
+                    </ul>
+
+                    <h3>8.3 Price Changes</h3>
+                    <ul>
+                        <li>Future price changes do not affect existing license holders</li>
+                        <li>Your license remains valid regardless of future pricing updates</li>
+                    </ul>
+
+                    <h2>9. Termination</h2>
+
+                    <h3>9.1 Termination by You</h3>
+                    <ul>
+                        <li>You may stop using the Software at any time</li>
+                        <li>Uninstall the Software to terminate your license</li>
+                    </ul>
+
+                    <h3>9.2 Termination by Us</h3>
+                    <ul>
+                        <li>We may terminate your license for breach of these Terms</li>
+                        <li>Commercial licenses remain valid once purchased unless Terms are violated</li>
+                        <li>Termination may result in loss of access to the Software</li>
+                    </ul>
+
+                    <h2>10. Disclaimers</h2>
+
+                    <h3>10.1 Warranty Disclaimer</h3>
+                    <p><strong>THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY. WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED. NO WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.</strong></p>
+
+                    <h3>10.2 Service Availability</h3>
+                    <ul>
+                        <li>We do not guarantee continuous availability of the Software</li>
+                        <li>Updates and maintenance may cause temporary interruptions</li>
+                    </ul>
+
+                    <h2>11. Limitation of Liability</h2>
+                    <p><strong>TO THE MAXIMUM EXTENT PERMITTED BY LAW:</strong></p>
+                    <ul>
+                        <li>WE ARE NOT LIABLE FOR ANY INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES</li>
+                        <li>OUR TOTAL LIABILITY SHALL NOT EXCEED THE AMOUNT PAID FOR THE SOFTWARE</li>
+                        <li>SOME JURISDICTIONS DO NOT ALLOW THESE LIMITATIONS</li>
+                    </ul>
+
+                    <h2>12. Support</h2>
+
+                    <h3>12.1 Support Levels</h3>
+                    <ul>
+                        <li><strong>Personal Users</strong>: Community support through documentation and forums</li>
+                        <li><strong>Commercial Users</strong>: Priority email support during business hours</li>
+                    </ul>
+
+                    <h2>13. Governing Law</h2>
+                    <p>These Terms are governed by the laws of the State of Texas, United States of America, without regard to conflict of law principles. Any disputes shall be resolved in the courts of Texas.</p>
+
+                    <h2>14. Changes to Terms</h2>
+                    <p>We may update these Terms from time to time. Material changes will be communicated through the Software. Continued use constitutes acceptance of updated Terms.</p>
+
+                    <div class="contact-section">
+                        <h2>15. Contact Information</h2>
+                        <p>For questions about these Terms:</p>
+                        <p><strong>Developer:</strong> Mykola Yakovliev<br>
+                        <strong>Email:</strong> <a href="mailto:support@dinodb.app">support@dinodb.app</a><br>
+                        <strong>Website:</strong> <a href="https://dinodb.app">https://dinodb.app</a></p>
+                    </div>
+
+                    <div class="footer-note">
+                        <p><em>By using DinoDB, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

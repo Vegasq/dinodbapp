@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Setup Guide - DinoDB</title>
+    <meta name="description" content="Step-by-step guide to configure AWS credentials and SSO for DinoDB. Complete setup instructions with AWS documentation links.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ2VQMHEC1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PZ2VQMHEC1');
+    </script>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/setup-guide.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="container nav">
+            <a href="index.html" class="logo">
+                <img src="dino.png" alt="DinoDB Logo">
+                DinoDB
+            </a>
+            <a href="index.html" class="back-link">
+                ← Back to Home
+            </a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <h1 class="page-title">AWS Setup Guide</h1>
+            <p class="page-subtitle">Complete step-by-step instructions to configure AWS credentials and SSO authentication for DinoDB. Follow these guides to get connected to your AWS DynamoDB tables.</p>
+            
+            <!-- Table of Contents -->
+            <div class="table-of-contents">
+                <h3>📋 Table of Contents</h3>
+                <ul>
+                    <li><a href="#aws-credentials">Setup AWS Security Credentials</a></li>
+                    <li><a href="#aws-sso">Setup AWS SSO (Identity Center)</a></li>
+                    <li><a href="#troubleshooting">Troubleshooting</a></li>
+                </ul>
+            </div>
+
+            <!-- AWS Credentials Section -->
+            <section class="setup-section" id="aws-credentials">
+                <h2 class="section-title">🔑 Setup AWS Security Credentials</h2>
+                <p class="section-description">
+                    AWS security credentials allow DinoDB to authenticate with your AWS account using Access Keys. 
+                    This method is suitable for personal accounts and development environments.
+                </p>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Sign in to AWS Console</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>Navigate to the AWS Management Console and sign in with your AWS account credentials.</p>
+                        <p><a href="https://console.aws.amazon.com/" class="aws-link external-link" target="_blank">Open AWS Console</a></p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Navigate to IAM Service</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>In the AWS Console, search for "IAM" in the services search bar and select <strong>IAM (Identity and Access Management)</strong>.</p>
+                        <p><a href="https://console.aws.amazon.com/iam/" class="aws-link external-link" target="_blank">Direct link to IAM Console</a></p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Create or Select a User</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>You have two options:</p>
+                        <ul>
+                            <li><strong>Use existing user:</strong> Click on "Users" in the left sidebar and select an existing user</li>
+                            <li><strong>Create new user:</strong> Click "Users" → "Create user" and follow the wizard</li>
+                        </ul>
+                        
+                        <div class="warning-box">
+                            <span class="warning-icon">⚠️</span>
+                            <strong>Security Best Practice:</strong> Create a dedicated user for DinoDB with minimal required permissions rather than using root account credentials.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-number">4</div>
+                        <h3 class="step-title">Attach DynamoDB Permissions</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>Ensure your user has the necessary DynamoDB permissions. You can:</p>
+                        <ul>
+                            <li><strong>Use AWS managed policy:</strong> Attach "AmazonDynamoDBFullAccess" for full access</li>
+                            <li><strong>Use AWS managed policy:</strong> Attach "AmazonDynamoDBReadOnlyAccess" for read-only access</li>
+                            <li><strong>Create custom policy:</strong> Define specific permissions for your needs</li>
+                        </ul>
+
+                        <div class="info-box">
+                            <span class="info-icon">ℹ️</span>
+                            <strong>Minimum Required Permissions:</strong>
+                            <ul style="margin: 10px 0; padding-left: 20px;">
+                                <li>dynamodb:DescribeTable</li>
+                                <li>dynamodb:ListTables</li>
+                                <li>dynamodb:Query</li>
+                                <li>dynamodb:Scan</li>
+                                <li>dynamodb:GetItem (optional - for item operations)</li>
+                                <li>dynamodb:PutItem (optional - for adding items)</li>
+                            </ul>
+                        </div>
+
+                        <p><a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/security-iam.html" class="aws-link external-link" target="_blank">AWS Documentation: DynamoDB IAM Permissions</a></p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-number">5</div>
+                        <h3 class="step-title">Create Access Key</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>Navigate to the user's "Security credentials" tab and create an access key:</p>
+                        <ul>
+                            <li>Click "Create access key"</li>
+                            <li>Select "Application running outside AWS" as the use case</li>
+                            <li>Add a description tag (optional): "DinoDB macOS App"</li>
+                            <li>Click "Create access key"</li>
+                        </ul>
+
+                        <div class="warning-box">
+                            <span class="warning-icon">⚠️</span>
+                            <strong>Important:</strong> Save both the Access Key ID and Secret Access Key immediately. The secret key will only be shown once and cannot be retrieved later.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-number">6</div>
+                        <h3 class="step-title">Add Account to DinoDB</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>In DinoDB:</p>
+                        <ul>
+                            <li>Click the "+" button or use File → New Account</li>
+                            <li>Enter your AWS Access Key ID</li>
+                            <li>Enter your AWS Secret Access Key</li>
+                            <li>Select your preferred AWS Region</li>
+                            <li>Give your account a descriptive name</li>
+                            <li>Click "Add Account"</li>
+                        </ul>
+
+                        <div class="success-box">
+                            <span class="success-icon">✅</span>
+                            <strong>Success!</strong> Your AWS account credentials are now configured and securely stored in macOS Keychain.
+                        </div>
+                    </div>
+                </div>
+
+                <p><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html" class="aws-link external-link" target="_blank">AWS Documentation: Managing Access Keys</a></p>
+            </section>
+
+            <!-- AWS SSO Section -->
+            <section class="setup-section" id="aws-sso">
+                <h2 class="section-title">🏢 Setup AWS SSO (Identity Center)</h2>
+                <p class="section-description">
+                    AWS SSO (now called AWS Identity Center) provides secure, centralized access management for multiple AWS accounts. 
+                    This is the recommended approach for organizations and users with multiple AWS accounts.
+                </p>
+
+                <div class="info-box">
+                    <span class="info-icon">ℹ️</span>
+                    <strong>Professional License Required:</strong> AWS SSO authentication is only available in DinoDB Professional. The Community edition supports standard AWS credentials only.
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Enable AWS Identity Center</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>Sign in to your AWS Management Console and navigate to AWS Identity Center:</p>
+                        <ul>
+                            <li>Search for "IAM Identity Center" in the services search</li>
+                            <li>Select your preferred region (us-east-1 recommended)</li>
+                            <li>Click "Enable" if Identity Center isn't already enabled</li>
+                            <li>Choose your identity source (AWS Identity Center directory or external provider)</li>
+                        </ul>
+                        <p><a href="https://console.aws.amazon.com/singlesignon/" class="aws-link external-link" target="_blank">Open AWS Identity Center Console</a></p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Configure Users and Groups</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>Set up users and groups in Identity Center:</p>
+                        <ul>
+                            <li>Navigate to "Users" in the left sidebar</li>
+                            <li>Add users manually or sync from your external identity provider</li>
+                            <li>Create groups to organize users (optional but recommended)</li>
+                            <li>Assign users to appropriate groups</li>
+                        </ul>
+                        <p><a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/addusers.html" class="aws-link external-link" target="_blank">AWS Documentation: Adding Users</a></p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Set Up Permission Sets</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>Create permission sets that define what users can access:</p>
+                        <ul>
+                            <li>Go to "Permission sets" in the left sidebar</li>
+                            <li>Click "Create permission set"</li>
+                            <li>Choose predefined or custom permission set</li>
+                            <li>For DynamoDB access, include policies like:</li>
+                        </ul>
+
+                        <div class="code-block">
+                            <code>
+• AmazonDynamoDBFullAccess (full access)<br>
+• AmazonDynamoDBReadOnlyAccess (read-only)<br>
+• Custom policy with specific DynamoDB permissions
+                            </code>
+                        </div>
+
+                        <p><a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/permissionsetsconcept.html" class="aws-link external-link" target="_blank">AWS Documentation: Permission Sets</a></p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-number">4</div>
+                        <h3 class="step-title">Assign Users to AWS Accounts</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>Connect users to AWS accounts with their permission sets:</p>
+                        <ul>
+                            <li>Navigate to "AWS accounts" in the left sidebar</li>
+                            <li>Select the AWS account you want to provide access to</li>
+                            <li>Click "Assign users or groups"</li>
+                            <li>Select users/groups and assign the appropriate permission set</li>
+                            <li>Repeat for additional AWS accounts as needed</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-number">5</div>
+                        <h3 class="step-title">Note Your SSO Configuration</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>You'll need these details for DinoDB configuration:</p>
+                        <ul>
+                            <li><strong>Start URL:</strong> Found in Identity Center settings (e.g., https://d-1234567890.awsapps.com/start)</li>
+                            <li><strong>SSO Region:</strong> The region where Identity Center is configured</li>
+                            <li><strong>Account ID(s):</strong> The AWS account numbers you have access to</li>
+                            <li><strong>Role Names:</strong> The permission set names that will become role names</li>
+                        </ul>
+
+                        <div class="code-block">
+                            <code>
+Example Configuration:<br>
+• Start URL: https://d-1234567890.awsapps.com/start<br>
+• SSO Region: us-east-1<br>
+• Account ID: 123456789012<br>
+• Role: DynamoDBFullAccess
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-number">6</div>
+                        <h3 class="step-title">Add SSO Account to DinoDB</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>In DinoDB Professional:</p>
+                        <ul>
+                            <li>Click the "+" button or use File → New Account</li>
+                            <li>Select "AWS Identity Center (SSO)" as the authentication type</li>
+                            <li>Enter your Start URL</li>
+                            <li>Select your SSO Region</li>
+                            <li>Give your configuration a descriptive name</li>
+                            <li>Click "Add Account"</li>
+                            <li>Follow the browser authentication flow</li>
+                            <li>Select the account and role you want to use</li>
+                        </ul>
+
+                        <div class="success-box">
+                            <span class="success-icon">✅</span>
+                            <strong>Success!</strong> Your AWS SSO configuration is now set up and ready to use. You can access multiple accounts and roles through a single authentication flow.
+                        </div>
+                    </div>
+                </div>
+
+                <p><a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html" class="aws-link external-link" target="_blank">AWS Documentation: What is AWS Identity Center</a></p>
+            </section>
+
+            <!-- Troubleshooting Section -->
+            <section class="setup-section" id="troubleshooting">
+                <h2 class="section-title">🔧 Troubleshooting</h2>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <div class="step-number">?</div>
+                        <h3 class="step-title">Common Issues & Solutions</h3>
+                    </div>
+                    <div class="step-content">
+                        <h4 style="margin: 20px 0 10px 0; color: var(--text-primary);">Access Denied Errors</h4>
+                        <ul>
+                            <li>Verify your IAM user has the correct DynamoDB permissions</li>
+                            <li>Check that your access keys are valid and not expired</li>
+                            <li>Ensure you're connecting to the correct AWS region</li>
+                        </ul>
+
+                        <h4 style="margin: 20px 0 10px 0; color: var(--text-primary);">SSO Authentication Fails</h4>
+                        <ul>
+                            <li>Verify your Start URL is correct and accessible</li>
+                            <li>Check that you have been assigned to the AWS account</li>
+                            <li>Ensure your SSO session hasn't expired</li>
+                            <li>Try clearing browser cookies for the SSO domain</li>
+                        </ul>
+
+                        <h4 style="margin: 20px 0 10px 0; color: var(--text-primary);">No Tables Visible</h4>
+                        <ul>
+                            <li>Confirm you're connected to the correct AWS region</li>
+                            <li>Verify your permissions include "dynamodb:ListTables"</li>
+                            <li>Check that DynamoDB tables exist in the selected region</li>
+                        </ul>
+
+                        <h4 style="margin: 20px 0 10px 0; color: var(--text-primary);">Connection Timeout</h4>
+                        <ul>
+                            <li>Check your internet connection</li>
+                            <li>Verify AWS service status for your region</li>
+                            <li>Try a different AWS region</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <span class="info-icon">ℹ️</span>
+                    <strong>Need Help?</strong> If you're still experiencing issues, please contact support at <a href="mailto:support@dinodb.app" class="aws-link">support@dinodb.app</a> with details about your configuration and error messages.
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 DinoDB by Mykola Yakovliev. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Track external link clicks
+        document.querySelectorAll('.external-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                gtag('event', 'click', {
+                    event_category: 'External Link',
+                    event_label: this.href,
+                    value: 1
+                });
+            });
+        });
+    </script>
+</body>
+</html>

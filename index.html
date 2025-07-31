@@ -3,416 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DinoDB - Native macOS DynamoDB Manager</title>
-    <meta name="description" content="A powerful native macOS application for managing AWS DynamoDB tables with a modern, intuitive interface and enterprise-grade security.">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+    <title>DinoDB - Professional DynamoDB Client for macOS</title>
+    <meta name="description" content="DinoDB is a powerful macOS application for managing AWS DynamoDB tables. Features SSO authentication, SQL-like queries, and intuitive table management.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ2VQMHEC1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PZ2VQMHEC1');
+    </script>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <img src="dino.png" alt="DinoDB" class="logo-icon">
-                    <span class="logo-text">DinoDB</span>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#screenshots">Screenshots</a></li>
-                    <li><a href="#download">Download</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Header -->
+    <header class="header">
+        <nav class="container nav">
+            <a href="#" class="logo">
+                <img src="dino.png" alt="DinoDB Logo">
+                DinoDB
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#screenshots">Screenshots</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="aws-setup.html">Setup Guide</a></li>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="download.html" class="download-btn">Download</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Manage DynamoDB with Native macOS Power</h1>
-                <p class="hero-subtitle">DinoDB is a powerful native macOS application designed for developers and teams who work with AWS DynamoDB. Built with SwiftUI and enterprise-grade security.</p>
-                <div class="hero-buttons">
-                    <button onclick="startCommercialTrial()" class="btn btn-primary">Try DinoDB Free</button>
-                    <a href="#pricing" class="btn btn-secondary">View Pricing</a>
-                </div>
-                <p class="hero-requirements">Requires macOS 14.0 or later</p>
+            <h1>Professional DynamoDB Management for macOS</h1>
+            <p>The most intuitive way to manage your AWS DynamoDB tables. With SSO authentication, SQL-like queries, and beautiful native macOS design.</p>
+            <div class="cta-buttons">
+                <a href="download.html" class="btn-primary">
+                    <span>Download for macOS</span>
+                    <span>↓</span>
+                </a>
+                <a href="aws-setup.html" class="btn-secondary">Setup Guide</a>
             </div>
-        </div>
-    </section>
-
-    <!-- Hero Table View Section -->
-    <section class="hero-showcase">
-        <div class="container">
-            <div class="showcase-content">
-                <div class="showcase-text">
-                    <h2>See Your Data Come to Life</h2>
-                    <p>Browse, edit, and manage your DynamoDB tables with an intuitive interface that feels right at home on macOS. Switch between table and JSON views, sort columns, and navigate your data with confidence.</p>
-                    <div class="showcase-features">
-                        <div class="showcase-feature">
-                            <span class="feature-icon">📊</span>
-                            <span>Sortable columns with pagination</span>
-                        </div>
-                        <div class="showcase-feature">
-                            <span class="feature-icon">🔍</span>
-                            <span>Real-time search and filtering</span>
-                        </div>
-                        <div class="showcase-feature">
-                            <span class="feature-icon">⚡</span>
-                            <span>Lightning-fast native performance</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="showcase-image">
-                    <img src="screenshots/table_view.png" alt="DinoDB Table View - Browse DynamoDB data with native macOS interface" class="hero-screenshot clickable-screenshot" onclick="openLightbox(this)">
-                    <div class="screenshot-overlay">
-                        <div class="overlay-badge">
-                            <span class="badge-icon">✨</span>
-                            <span class="badge-text">Native macOS Design</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <img src="images/table_view.png" alt="DinoDB Main Interface" class="hero-image">
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="features">
+    <section class="features" id="features">
         <div class="container">
-            <h2 class="section-title">Powerful Features for DynamoDB Management</h2>
+            <div class="section-header">
+                <h2 class="section-title">Everything you need to manage DynamoDB</h2>
+                <p class="section-subtitle">DinoDB combines powerful features with an intuitive interface, making database management effortless.</p>
+            </div>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🔐</div>
-                    <h3>Enterprise Security</h3>
-                    <p>Credentials stored securely in macOS Keychain. Supports multiple AWS accounts with automatic discovery from ~/.aws/credentials.</p>
+                    <h3>AWS SSO Integration</h3>
+                    <p>Seamlessly connect using AWS Single Sign-On and multi-account support.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💾</div>
+                    <h3>Multiple Account Types</h3>
+                    <p>Support for SSO accounts, standard AWS profiles, and custom configurations all in one place.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>SQL-Like Queries</h3>
+                    <p>Write familiar SQL queries to interact with your DynamoDB tables.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
-                    <h3>Real-time Metrics</h3>
-                    <p>CloudWatch integration with interactive charts, performance monitoring, and configurable alerts for capacity, latency, and errors.</p>
+                    <h3>Table Management</h3>
+                    <p>View table information, schema details and attribute definitions at a glance.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🎨</div>
                     <h3>Native macOS Design</h3>
-                    <p>Built with SwiftUI following Apple's Human Interface Guidelines. Supports Light, Dark, and System themes with live switching.</p>
+                    <p>Beautiful, responsive interface that feels right at home on macOS with dark mode support.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
-                    <h3>Fast & Efficient</h3>
-                    <p>Native performance with configurable pagination, sortable columns, and both table and JSON view modes for data exploration.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔍</div>
-                    <h3>Advanced Querying</h3>
-                    <p>Visual query builder for constructing DynamoDB queries. Full CRUD operations with syntax-highlighted JSON editing.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔑</div>
-                    <h3>AWS SSO Integration</h3>
-                    <p>Seamlessly integrate with AWS Single Sign-On for enterprise authentication. Access multiple AWS accounts with federated credentials (Commercial license only).</p>
+                    <h3>Fast & Secure</h3>
+                    <p>Local credential storage using macOS Keychain Services.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Key Features Carousel -->
-    <section class="key-features">
+    <!-- Screenshots Section -->
+    <section class="screenshots" id="screenshots">
         <div class="container">
-            <h2 class="section-title">Everything You Need</h2>
-            <div class="features-carousel">
-                <!-- Navigation buttons -->
-                <button class="carousel-nav prev" onclick="previousSlide()">‹</button>
-                <button class="carousel-nav next" onclick="nextSlide()">›</button>
-                
-                <div class="carousel-container">
-                    <div class="carousel-track">
-                        <!-- Slide 1: Account Management -->
-                        <div class="carousel-slide active">
-                            <div class="slide-content">
-                                <div class="slide-text">
-                                    <h3>Account Management</h3>
-                                    <ul class="slide-features">
-                                        <li>Multiple AWS account support with SSO integration</li>
-                                        <li>Automatic AWS credentials file discovery</li>
-                                        <li>Secure credential storage in macOS Keychain</li>
-                                        <li>Tags and descriptions for organization</li>
-                                        <li>Visual distinction between account types</li>
-                                    </ul>
-                                </div>
-                                <div class="slide-image">
-                                    <img src="screenshots/accounts_list.png" alt="DinoDB Account Management" class="carousel-screenshot clickable-screenshot" onclick="openLightbox(this)">
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Slide 2: Table Browsing -->
-                        <div class="carousel-slide">
-                            <div class="slide-content">
-                                <div class="slide-text">
-                                    <h3>Table Browsing</h3>
-                                    <ul class="slide-features">
-                                        <li>Sortable columns with configurable pagination</li>
-                                        <li>Search and filter capabilities</li>
-                                        <li>Favorites system for quick access</li>
-                                        <li>Real-time item count and table status</li>
-                                        <li>Spreadsheet-like interface for data exploration</li>
-                                    </ul>
-                                </div>
-                                <div class="slide-image">
-                                    <img src="screenshots/table_view.png" alt="DinoDB Table View" class="carousel-screenshot clickable-screenshot" onclick="openLightbox(this)">
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Slide 3: JSON View -->
-                        <div class="carousel-slide">
-                            <div class="slide-content">
-                                <div class="slide-text">
-                                    <h3>JSON View & Editing</h3>
-                                    <ul class="slide-features">
-                                        <li>Syntax-highlighted DynamoDB JSON</li>
-                                        <li>Toggle between table and JSON views</li>
-                                        <li>Direct JSON editing capabilities</li>
-                                        <li>Format validation and error highlighting</li>
-                                        <li>Export data in multiple formats</li>
-                                    </ul>
-                                </div>
-                                <div class="slide-image">
-                                    <img src="screenshots/json_view.png" alt="DinoDB JSON View" class="carousel-screenshot clickable-screenshot" onclick="openLightbox(this)">
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Slide 4: Item Editing -->
-                        <div class="carousel-slide">
-                            <div class="slide-content">
-                                <div class="slide-text">
-                                    <h3>Item Management</h3>
-                                    <ul class="slide-features">
-                                        <li>Create, read, update, and delete operations</li>
-                                        <li>Form-based editing with validation</li>
-                                        <li>Type-aware field editors</li>
-                                        <li>Bulk operations support</li>
-                                    </ul>
-                                </div>
-                                <div class="slide-image">
-                                    <img src="screenshots/edit_item_view.png" alt="DinoDB Item Editor" class="carousel-screenshot clickable-screenshot" onclick="openLightbox(this)">
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Slide 5: Performance Monitoring -->
-                        <div class="carousel-slide">
-                            <div class="slide-content">
-                                <div class="slide-text">
-                                    <h3>Performance Monitoring</h3>
-                                    <ul class="slide-features">
-                                        <li>Real-time CloudWatch metrics integration</li>
-                                        <li>Interactive charts and trend analysis</li>
-                                        <li>Capacity utilization tracking</li>
-                                        <li>Performance optimization insights</li>
-                                    </ul>
-                                </div>
-                                <div class="slide-image">
-                                    <img src="screenshots/performance_view.png" alt="DinoDB Performance Dashboard" class="carousel-screenshot clickable-screenshot" onclick="openLightbox(this)">
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Slide 6: Table Information -->
-                        <div class="carousel-slide">
-                            <div class="slide-content">
-                                <div class="slide-text">
-                                    <h3>Table Information</h3>
-                                    <ul class="slide-features">
-                                        <li>Comprehensive table metadata display</li>
-                                        <li>Primary key schema visualization</li>
-                                        <li>Attribute definitions and types</li>
-                                        <li>Index information and statistics</li>
-                                    </ul>
-                                </div>
-                                <div class="slide-image">
-                                    <img src="screenshots/table_information_view.png" alt="DinoDB Table Information" class="carousel-screenshot clickable-screenshot" onclick="openLightbox(this)">
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Slide 7: Cost Analysis -->
-                        <div class="carousel-slide">
-                            <div class="slide-content">
-                                <div class="slide-text">
-                                    <h3>Cost Analysis</h3>
-                                    <ul class="slide-features">
-                                        <li>Real-time session cost tracking</li>
-                                        <li>Billing mode detection</li>
-                                        <li>Cost breakdown by operation type</li>
-                                    </ul>
-                                </div>
-                                <div class="slide-image">
-                                    <img src="screenshots/cost_analysis_view.png" alt="DinoDB Cost Analysis" class="carousel-screenshot clickable-screenshot" onclick="openLightbox(this)">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="section-header">
+                <h2 class="section-title">See DinoDB in Action</h2>
+                <p class="section-subtitle">Beautiful interfaces that make complex database operations simple and intuitive.</p>
+            </div>
+            <div class="screenshots-grid">
+                <div class="screenshot-card">
+                    <img src="images/list_of_accounts.png" alt="Account Management">
+                    <h3>Multi-Account Management</h3>
+                    <p>Organize and switch between multiple AWS accounts and regions effortlessly.</p>
                 </div>
-                
-                <!-- Slide indicators -->
-                <div class="carousel-indicators">
-                    <button class="indicator active" onclick="goToSlide(0)"></button>
-                    <button class="indicator" onclick="goToSlide(1)"></button>
-                    <button class="indicator" onclick="goToSlide(2)"></button>
-                    <button class="indicator" onclick="goToSlide(3)"></button>
-                    <button class="indicator" onclick="goToSlide(4)"></button>
-                    <button class="indicator" onclick="goToSlide(5)"></button>
-                    <button class="indicator" onclick="goToSlide(6)"></button>
+                <div class="screenshot-card">
+                    <img src="images/sso_screen.png" alt="SSO Authentication">
+                    <h3>AWS SSO Authentication</h3>
+                    <p>Secure authentication flow.</p>
+                </div>
+                <div class="screenshot-card">
+                    <img src="images/table_info_view.png" alt="Table Information">
+                    <h3>Detailed Table Information</h3>
+                    <p>Comprehensive view of table metadata, schema, and configuration settings.</p>
+                </div>
+                <div class="screenshot-card">
+                    <img src="images/query_example_view.png" alt="Query Interface">
+                    <h3>Advanced Query Interface</h3>
+                    <p>Write and execute SQL-like queries.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
+    <section class="pricing" id="pricing">
         <div class="container">
-            <h2 class="section-title">Simple, Transparent Pricing</h2>
-            <p class="pricing-subtitle">Choose the plan that works for you</p>
-            <div class="pricing-grid">
+            <div class="section-header">
+                <h2 class="section-title">Choose Your Plan</h2>
+                <p class="section-subtitle">Start free for personal use or upgrade to Pro for commercial features.</p>
+            </div>
+            <div class="pricing-cards">
                 <div class="pricing-card">
-                    <h3 class="pricing-tier">Personal</h3>
-                    <div class="pricing-amount">
-                        <span class="price">Free</span>
-                        <span class="period">forever</span>
-                    </div>
-                    <p class="pricing-description">Perfect for individual developers and personal projects</p>
+                    <h3 class="pricing-title">Personal</h3>
+                    <div class="pricing-price">Free</div>
+                    <div class="pricing-period">Forever</div>
                     <ul class="pricing-features">
-                        <li>Unlimited AWS accounts</li>
-                        <li>Full CloudWatch integration</li>
-                        <li>Metric alerts & notifications</li>
-                        <li>All core features</li>
+                        <li>Full DynamoDB management</li>
+                        <li>Standard AWS profile support</li>
+                        <li>SQL-like query interface</li>
+                        <li>Table information views</li>
                         <li>Personal use only</li>
-                        <li class="excluded">AWS SSO not included</li>
                     </ul>
-                    <button onclick="downloadPersonalVersion()" class="btn btn-secondary pricing-btn">Download Free</button>
+                    <a href="download.html" class="btn-primary">Get Started</a>
                 </div>
                 <div class="pricing-card featured">
-                    <div class="pricing-badge">Most Popular</div>
-                    <h3 class="pricing-tier">Commercial</h3>
-                    <div class="pricing-amount">
-                        <span class="price">$5</span>
-                        <span class="period">per seat/month</span>
-                    </div>
-                    <p class="pricing-description">For businesses and commercial use</p>
+                    <h3 class="pricing-title">Commercial</h3>
+                    <!-- <div class="pricing-badge">Most Popular</div> -->
+                    <div class="pricing-price">$20</div>
+                    <div class="pricing-period">one-time license</div>
                     <ul class="pricing-features">
                         <li>Everything in Personal</li>
-                        <li class="highlighted">AWS SSO integration</li>
-                        <li>Commercial use license</li>
-                        <li>Priority email support</li>
-                        <li>Early access to new features</li>
-                        <li>Volume discounts available</li>
+                        <li>AWS SSO authentication</li>
+                        <li>Commercial use allowed</li>
                     </ul>
-                    <button onclick="startCommercialTrial()" class="btn btn-primary pricing-btn">Start Free Trial</button>
+                    <a href="download.html" class="btn-primary">Buy License</a>
                 </div>
-            </div>
-            <p class="pricing-note">Commercial licenses are billed per seat. Volume discounts available for teams. Powered by Paddle for secure payments.</p>
-        </div>
-    </section>
-
-    <!-- Screenshots Section -->
-    <section id="screenshots" class="screenshots">
-        <div class="container">
-            <h2 class="section-title">See DinoDB in Action</h2>
-            <div class="screenshots-grid">
-                <div class="screenshot-item">
-                    <img src="screenshots/table_view.png" alt="DynamoDB Table View" class="screenshot-image clickable-screenshot" onclick="openLightbox(this)">
-                    <p class="screenshot-caption">Browse DynamoDB tables with sortable columns and pagination</p>
-                </div>
-                <div class="screenshot-item">
-                    <img src="screenshots/performance_view.png" alt="Performance Metrics Dashboard" class="screenshot-image clickable-screenshot" onclick="openLightbox(this)">
-                    <p class="screenshot-caption">Monitor table performance with real-time CloudWatch metrics</p>
-                </div>
-                <div class="screenshot-item">
-                    <img src="screenshots/json_view.png" alt="JSON View Mode" class="screenshot-image clickable-screenshot" onclick="openLightbox(this)">
-                    <p class="screenshot-caption">View and edit DynamoDB items in syntax-highlighted JSON</p>
-                </div>
-                <div class="screenshot-item">
-                    <img src="screenshots/edit_item_view.png" alt="Edit Item Dialog" class="screenshot-image clickable-screenshot" onclick="openLightbox(this)">
-                    <p class="screenshot-caption">Create and edit DynamoDB items with form validation</p>
-                </div>
-                <div class="screenshot-item">
-                    <img src="screenshots/table_information_view.png" alt="Table Information" class="screenshot-image clickable-screenshot" onclick="openLightbox(this)">
-                    <p class="screenshot-caption">View detailed table metadata and schema information</p>
-                </div>
-                <div class="screenshot-item">
-                    <img src="screenshots/cost_analysis_view.png" alt="Cost Analysis Dashboard" class="screenshot-image clickable-screenshot" onclick="openLightbox(this)">
-                    <p class="screenshot-caption">Analyze DynamoDB usage costs and optimize spending</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Download Section -->
-    <section id="download" class="download">
-        <div class="container">
-            <div class="download-content">
-                <h2>Get Started with DinoDB</h2>
-                <p class="download-subtitle">Start your free trial or download for personal use</p>
-                <div class="download-options">
-                    <div class="download-card">
-                        <h3>Free Trial</h3>
-                        <p>Try DinoDB free for 14 days. No credit card required.</p>
-                        <button onclick="startCommercialTrial()" class="btn btn-primary">Start Free Trial</button>
-                        <p class="download-note">macOS 14.0+ required • Includes all features</p>
-                    </div>
-                    <div class="download-card">
-                        <h3>Personal Use</h3>
-                        <p>Free forever for individual developers and personal projects.</p>
-                        <button onclick="downloadPersonalVersion()" class="btn btn-secondary">Download for Personal Use</button>
-                        <p class="download-note">Not for commercial use • Full feature set</p>
-                    </div>
-                </div>
-                <div class="download-faq">
-                    <h3>Frequently Asked Questions</h3>
-                    <div class="faq-item">
-                        <h4>What's the difference between Personal and Commercial licenses?</h4>
-                        <p>The Personal license is free forever but limited to non-commercial use and doesn't include AWS SSO integration. The Commercial license ($5/seat/month) allows business use, includes AWS SSO, and priority support.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h4>How does per-seat pricing work?</h4>
-                        <p>Each user who needs DinoDB requires a commercial license. For example, a team of 10 developers would need 10 seats at $5/seat/month. Volume discounts are available for larger teams.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h4>Can I try before I buy?</h4>
-                        <p>Yes! We offer a 14-day free trial with all features unlocked. No credit card required.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Documentation Section -->
-    <section class="documentation">
-        <div class="container">
-            <h2 class="section-title">Documentation & Support</h2>
-            <div class="docs-grid">
-                <a href="#" class="doc-card">
-                    <h3>Getting Started</h3>
-                    <p>Quick start guide and initial setup instructions</p>
-                </a>
-                <a href="#" class="doc-card">
-                    <h3>User Guide</h3>
-                    <p>Complete documentation for all features</p>
-                </a>
-                <a href="#" class="doc-card">
-                    <h3>Video Tutorials</h3>
-                    <p>Step-by-step video guides for common tasks</p>
-                </a>
-                <a href="#" class="doc-card">
-                    <h3>Support Center</h3>
-                    <p>FAQs, troubleshooting, and contact support</p>
-                </a>
             </div>
         </div>
     </section>
@@ -421,279 +177,70 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-info">
-                    <div class="footer-logo">
-                        <img src="dino.png" alt="DinoDB" class="logo-icon">
-                        <span class="logo-text">DinoDB</span>
-                    </div>
-                    <p>A native macOS application for managing AWS DynamoDB tables.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Product</h4>
+                <div class="footer-section">
+                    <h3>Product</h3>
                     <ul>
+                        <li><a href="download.html">Download</a></li>
                         <li><a href="#features">Features</a></li>
                         <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#download">Download</a></li>
-                        <li><a href="#">Support</a></li>
+                        <li><a href="#screenshots">Screenshots</a></li>
                     </ul>
                 </div>
-                <div class="footer-tech">
-                    <h4>Built With</h4>
+                <div class="footer-section">
+                    <h3>Support</h3>
                     <ul>
-                        <li>SwiftUI</li>
-                        <li>AWS SDK for Swift</li>
-                        <li>SwiftData</li>
-                        <li>CloudWatch</li>
+                        <li><a href="aws-setup.html">AWS Setup Guide</a></li>
+                        <li><a href="mailto:support@dinodb.app">Contact Support</a></li>
+                        <li><a href="https://github.com/Vegasq/dinodbapp">GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="license.html">License</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Developer</h3>
+                    <ul>
+                        <li><strong>Mykola Yakovliev</strong></li>
+                        <li><a href="mailto:support@dinodb.app">support@dinodb.app</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 DinoDB. All rights reserved. <a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></p>
+                <p>&copy; 2025 DinoDB by Mykola Yakovliev. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <div class="lightbox-content" onclick="event.stopPropagation()">
-            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-            <img id="lightbox-image" class="lightbox-image" src="" alt="">
-            <div class="lightbox-caption">
-                <p id="lightbox-caption-text"></p>
-            </div>
-            <div class="lightbox-nav">
-                <button class="lightbox-prev" onclick="previousImage()">‹</button>
-                <button class="lightbox-next" onclick="nextImage()">›</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Carousel JavaScript -->
     <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const indicators = document.querySelectorAll('.indicator');
-        const totalSlides = slides.length;
-
-        function updateCarousel() {
-            // Hide all slides
-            slides.forEach(slide => slide.classList.remove('active'));
-            indicators.forEach(indicator => indicator.classList.remove('active'));
-            
-            // Show current slide
-            slides[currentSlide].classList.add('active');
-            indicators[currentSlide].classList.add('active');
-            
-            // Update track position
-            const track = document.querySelector('.carousel-track');
-            track.style.transform = `translateX(-${currentSlide * 100}%)`;
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateCarousel();
-        }
-
-        function previousSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateCarousel();
-        }
-
-        function goToSlide(slideIndex) {
-            currentSlide = slideIndex;
-            updateCarousel();
-        }
-
-        // Auto-advance carousel every 6 seconds
-        setInterval(nextSlide, 6000);
-
-        // Keyboard navigation
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'ArrowLeft') {
-                previousSlide();
-            } else if (e.key === 'ArrowRight') {
-                nextSlide();
-            }
-        });
-
-        // Touch/swipe support for mobile
-        let startX = 0;
-        let endX = 0;
-
-        const carousel = document.querySelector('.carousel-container');
-        
-        carousel.addEventListener('touchstart', function(e) {
-            startX = e.touches[0].clientX;
-        });
-
-        carousel.addEventListener('touchend', function(e) {
-            endX = e.changedTouches[0].clientX;
-            handleSwipe();
-        });
-
-        function handleSwipe() {
-            const diffX = startX - endX;
-            const threshold = 50; // Minimum distance for swipe
-            
-            if (Math.abs(diffX) > threshold) {
-                if (diffX > 0) {
-                    nextSlide(); // Swipe left
-                } else {
-                    previousSlide(); // Swipe right
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
                 }
-            }
-        }
-
-        // Pause auto-advance on hover
-        carousel.addEventListener('mouseenter', function() {
-            clearInterval(autoAdvance);
+            });
         });
 
-        carousel.addEventListener('mouseleave', function() {
-            autoAdvance = setInterval(nextSlide, 6000);
-        });
-
-        let autoAdvance = setInterval(nextSlide, 6000);
-
-        // Lightbox functionality
-        let currentImageIndex = 0;
-        let allImages = [];
-
-        function initializeLightbox() {
-            // Collect all clickable screenshots
-            allImages = Array.from(document.querySelectorAll('.clickable-screenshot'));
-        }
-
-        function openLightbox(clickedImage) {
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImage = document.getElementById('lightbox-image');
-            const lightboxCaption = document.getElementById('lightbox-caption-text');
-            
-            // Find the index of the clicked image
-            currentImageIndex = allImages.indexOf(clickedImage);
-            
-            // Set image and caption
-            lightboxImage.src = clickedImage.src;
-            lightboxImage.alt = clickedImage.alt;
-            lightboxCaption.textContent = clickedImage.alt;
-            
-            // Show lightbox
-            lightbox.style.display = 'block';
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
-        }
-
-        function closeLightbox() {
-            const lightbox = document.getElementById('lightbox');
-            lightbox.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Restore scrolling
-        }
-
-        function previousImage() {
-            currentImageIndex = (currentImageIndex - 1 + allImages.length) % allImages.length;
-            updateLightboxImage();
-        }
-
-        function nextImage() {
-            currentImageIndex = (currentImageIndex + 1) % allImages.length;
-            updateLightboxImage();
-        }
-
-        function updateLightboxImage() {
-            const lightboxImage = document.getElementById('lightbox-image');
-            const lightboxCaption = document.getElementById('lightbox-caption-text');
-            const currentImage = allImages[currentImageIndex];
-            
-            lightboxImage.src = currentImage.src;
-            lightboxImage.alt = currentImage.alt;
-            lightboxCaption.textContent = currentImage.alt;
-        }
-
-        // Keyboard navigation for lightbox
-        document.addEventListener('keydown', function(e) {
-            const lightbox = document.getElementById('lightbox');
-            if (lightbox.style.display === 'block') {
-                if (e.key === 'Escape') {
-                    closeLightbox();
-                } else if (e.key === 'ArrowLeft') {
-                    previousImage();
-                } else if (e.key === 'ArrowRight') {
-                    nextImage();
-                }
-            }
-        });
-
-        // Initialize lightbox when page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            initializeLightbox();
-            initializePaddle();
-        });
-
-        // Paddle Integration
-        function initializePaddle() {
-            try {
-                // Set environment BEFORE Initialize
-                Paddle.Environment.set('sandbox');
-                
-                // Initialize Paddle - replace with your actual client-side token from Paddle dashboard
-                Paddle.Initialize({
-                    token: 'test_281abbb7c7aaef64274f2986274',
-                    debug: true // Enable debug mode for more detailed logs
+        // Track download button clicks
+        document.querySelectorAll('a[href="download.html"]').forEach(button => {
+            button.addEventListener('click', function(e) {
+                gtag('event', 'click', {
+                    event_category: 'Download',
+                    event_label: 'Download Button',
+                    value: 1
                 });
-                console.log('Paddle initialized successfully');
-                
-                // Test the connection
-                console.log('Paddle status:', Paddle.Status);
-            } catch (error) {
-                console.error('Paddle initialization failed:', error);
-                console.error('Error details:', JSON.stringify(error, null, 2));
-            }
-        }
-
-        function openPaddleCheckout(priceId, email = '') {
-            try {
-                console.log('Opening Paddle checkout with priceId:', priceId);
-                console.log('Current origin:', window.location.origin);
-                
-                const checkoutConfig = {
-                    items: [{ priceId: priceId, quantity: 1 }],
-                    customer: email ? { email: email } : undefined,
-                    settings: {
-                        successUrl: window.location.origin + '/success.html?tx={checkout_id}'
-                        // ,
-                        // errorUrl: window.location.origin + '/?error=checkout_failed'
-                    }
-                };
-                
-                console.log('Checkout config:', JSON.stringify(checkoutConfig, null, 2));
-                Paddle.Checkout.open(checkoutConfig);
-                console.log('Checkout opened successfully');
-            } catch (error) {
-                console.error('Paddle checkout failed:', error);
-                alert('Payment system temporarily unavailable: ' + (error.message || 'Please try again later.'));
-            }
-        }
-
-        function showPaymentSuccess() {
-            alert('Payment successful! Check your email for download instructions.');
-        }
-
-        // Commercial license checkout
-        function startCommercialTrial() {
-            // Check if Paddle is properly configured
-            if (!window.Paddle || !window.Paddle.Checkout) {
-                alert('Payment system is being configured. Please contact support for commercial licensing.');
-                return;
-            }
-            
-            // Replace with your actual Paddle product/price ID for commercial license
-            openPaddleCheckout("pri_01k16wbxcnc48b6jrgntmze5dr");
-        }
-
-        // Personal download (free)
-        function downloadPersonalVersion() {
-            // Handle free download
-            alert('Starting download... (Replace with actual download link)');
-        }
+            });
+        });
     </script>
 </body>
 </html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download DinoDB - Professional DynamoDB Client for macOS</title>
+    <meta name="description" content="Download DinoDB for macOS. Professional DynamoDB client with SSO authentication and SQL-like queries.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ2VQMHEC1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PZ2VQMHEC1');
+    </script>
+    
+    <style>
+        :root {
+            --primary-color: #007AFF;
+            --secondary-color: #5AC8FA;
+            --background-dark: #1C1C1E;
+            --background-light: #F2F2F7;
+            --text-primary: #FFFFFF;
+            --text-secondary: #8E8E93;
+            --card-background: #2C2C2E;
+            --gradient-primary: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--background-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+        
+        .logo img {
+            width: 32px;
+        }
+        
+        .back-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Main Content */
+        .main {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .download-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            background: var(--gradient-primary);
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+        
+        .main h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .main p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .download-card {
+            background: var(--card-background);
+            border-radius: 20px;
+            padding: 40px 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 40px;
+        }
+        
+        .version-info {
+            margin-bottom: 30px;
+        }
+        
+        .version-number {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .version-details {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        
+        .download-button {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: transform 0.2s ease;
+            margin-bottom: 20px;
+        }
+        
+        .download-button:hover {
+            transform: translateY(-2px);
+            color: white;
+        }
+        
+        .download-size {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 15px;
+        }
+        
+        .requirements {
+            background: rgba(0, 122, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(0, 122, 255, 0.2);
+        }
+        
+        .requirements h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        
+        .requirements-list {
+            text-align: left;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .requirements-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .requirements-list li {
+            padding: 8px 0;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .requirements-list li:before {
+            content: "✓";
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .installation-guide {
+            background: var(--card-background);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: left;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .installation-guide h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .installation-steps {
+            counter-reset: step-counter;
+        }
+        
+        .installation-step {
+            margin-bottom: 20px;
+            padding-left: 40px;
+            position: relative;
+            counter-increment: step-counter;
+        }
+        
+        .installation-step:before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 25px;
+            height: 25px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .installation-step h3 {
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        
+        .installation-step p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .footer-info {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
+        }
+        
+        .footer-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .footer-info a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Countdown */
+        .redirect-info {
+            background: rgba(255, 193, 7, 0.1);
+            border: 1px solid rgba(255, 193, 7, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            color: #FFC107;
+        }
+        
+        .countdown {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .main h1 {
+                font-size: 2rem;
+            }
+            
+            .download-icon {
+                width: 80px;
+                height: 80px;
+                font-size: 32px;
+            }
+            
+            .download-button {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="container nav">
+            <a href="index.html" class="logo">
+                <img src="dino.png" alt="DinoDB Logo">
+                DinoDB
+            </a>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <div class="download-icon">📥</div>
+            <h1>Download DinoDB</h1>
+            <p>Get the most intuitive DynamoDB client for macOS. Start managing your databases with professional tools designed for developers and teams.</p>
+            
+            <div class="download-card">
+                <div class="version-info">
+                    <div class="version-number">Version 25.8.2</div>
+                    <div class="version-details">Latest stable release • Universal Binary (Intel & Apple Silicon)</div>
+                </div>
+                
+                <a href="#" id="downloadBtn" class="download-button">
+                    <span>⬇️</span>
+                    <span>Download for macOS</span>
+                </a>
+                
+                <div id="redirectInfo" class="redirect-info" style="display: none;">
+                    <p>Download will start automatically in <span id="countdown" class="countdown">3</span> seconds...</p>
+                    <p><small>If the download doesn't start, <a href="https://github.com/Vegasq/dinodbapp/releases/download/25.8.2/DinoDB.dmg" id="manualDownload">click here</a>.</small></p>
+                </div>
+                
+                <div class="download-size">
+                    File size: ~45 MB • DMG Installer
+                </div>
+            </div>
+
+            <div class="requirements">
+                <h2>System Requirements</h2>
+                <div class="requirements-list">
+                    <ul>
+                        <li>macOS 12.0 (Monterey) or later</li>
+                        <li>Intel or Apple Silicon Mac</li>
+                        <li>150 MB available storage</li>
+                        <li>AWS account (for DynamoDB access)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="installation-guide">
+                <h2>Installation Guide</h2>
+                <div class="installation-steps">
+                    <div class="installation-step">
+                        <h3>Download the DMG file</h3>
+                        <p>Click the download button above to get the latest version of DinoDB.</p>
+                    </div>
+                    <div class="installation-step">
+                        <h3>Mount the disk image</h3>
+                        <p>Double-click the downloaded DMG file to mount it and open the installer window.</p>
+                    </div>
+                    <div class="installation-step">
+                        <h3>Install DinoDB</h3>
+                        <p>Drag the DinoDB app to your Applications folder to complete the installation.</p>
+                    </div>
+                    <div class="installation-step">
+                        <h3>Launch and configure</h3>
+                        <p>Open DinoDB from Applications and add your AWS credentials or SSO configuration to get started.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <p>Having trouble? <a href="mailto:support@dinodb.app">Contact Support</a></p>
+                <p>By downloading DinoDB, you agree to our <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Track download initiation
+            gtag('event', 'download_initiated', {
+                event_category: 'Download',
+                event_label: 'Download Page',
+                value: 1
+            });
+            
+            // Show redirect info
+            document.getElementById('redirectInfo').style.display = 'block';
+            
+            // Start countdown
+            let countdown = 3;
+            const countdownElement = document.getElementById('countdown');
+            
+            const timer = setInterval(function() {
+                countdown--;
+                countdownElement.textContent = countdown;
+                
+                if (countdown <= 0) {
+                    clearInterval(timer);
+                    
+                    // Track actual download
+                    gtag('event', 'download_started', {
+                        event_category: 'Download',
+                        event_label: 'Automatic Redirect',
+                        value: 1
+                    });
+                    
+                    // Redirect to actual download URL
+                    window.location.href = 'https://github.com/Vegasq/dinodbapp/releases/download/25.8.2/DinoDB.dmg';
+                }
+            }, 1000);
+        });
+        
+        // Track manual download link clicks
+        document.getElementById('manualDownload').addEventListener('click', function() {
+            gtag('event', 'download_started', {
+                event_category: 'Download',
+                event_label: 'Manual Link',
+                value: 1
+            });
+        });
+        
+        // Track page view
+        gtag('event', 'page_view', {
+            page_title: 'Download Page',
+            page_location: window.location.href
+        });
+    </script>
+</body>
+</html>

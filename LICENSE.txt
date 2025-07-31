@@ -1,0 +1,114 @@
+DinoDB End User License Agreement
+
+Copyright (c) 2025 Mykola Yakovliev. All rights reserved.
+
+IMPORTANT: PLEASE READ THIS END USER LICENSE AGREEMENT ("AGREEMENT") CAREFULLY BEFORE INSTALLING OR USING THE DINODB SOFTWARE. BY INSTALLING, COPYING, OR OTHERWISE USING THE SOFTWARE, YOU AGREE TO BE BOUND BY THE TERMS OF THIS AGREEMENT. IF YOU DO NOT AGREE TO THE TERMS OF THIS AGREEMENT, DO NOT INSTALL OR USE THE SOFTWARE.
+
+1. DEFINITIONS
+
+"Software" means the DinoDB application, including all components, documentation, and updates provided by Licensor.
+
+"Personal Use" means use of the Software by an individual for personal, non-commercial purposes, including personal learning, hobby projects, and personal data management.
+
+"Commercial Use" means any use of the Software in connection with a business, commercial enterprise, government entity, non-profit organization, or any revenue-generating activity, including but not limited to: (a) use by employees, contractors, or agents of any commercial entity; (b) use in connection with commercial consulting or services; (c) use to manage commercial AWS resources or data; or (d) any use that directly or indirectly supports business operations.
+
+"Licensor" means Mykola Yakovliev.
+
+"Valid License" means a current, paid subscription license obtained from Licensor for Commercial Use.
+
+2. GRANT OF LICENSE
+
+2.1 Personal Use License. Subject to the terms of this Agreement, Licensor grants you a non-exclusive, non-transferable license to install and use the Software for Personal Use only, free of charge.
+
+2.2 Commercial Use License. Commercial Use of the Software requires a Valid License. Subject to payment of applicable fees and compliance with this Agreement, Licensor grants Valid License holders a non-exclusive, non-transferable license to install and use the Software for Commercial Use.
+
+2.3 License Scope. You may install the Software on multiple devices under your direct control, provided that your use complies with the applicable license type (Personal Use or Commercial Use).
+
+3. RESTRICTIONS
+
+You may not, and may not permit others to:
+
+3.1 Use the Software for Commercial Use without a Valid License;
+3.2 Copy, modify, adapt, alter, translate, or create derivative works of the Software;
+3.3 Reverse engineer, disassemble, decompile, or otherwise attempt to derive the source code of the Software;
+3.4 Distribute, sublicense, rent, lease, lend, or transfer the Software to any third party;
+3.5 Remove, alter, or obscure any proprietary notices on the Software;
+3.6 Use the Software in violation of applicable laws or regulations;
+3.7 Use the Software to develop competing products or services;
+3.8 Circumvent or attempt to circumvent any license validation or usage tracking mechanisms.
+
+4. SUBSCRIPTION TERMS (COMMERCIAL USE)
+
+4.1 Payment. Commercial Use requires payment of subscription fees as specified on Licensor's website or in the Software.
+
+4.2 Term. Commercial licenses are provided on a subscription basis for the period specified in your purchase (monthly or annual).
+
+4.3 Renewal. Subscriptions automatically renew unless cancelled prior to the renewal date.
+
+4.4 Termination. Your Commercial Use license will terminate immediately upon non-payment or breach of this Agreement.
+
+5. INTELLECTUAL PROPERTY
+
+5.1 Ownership. The Software is licensed, not sold. Licensor retains all right, title, and interest in and to the Software, including all intellectual property rights.
+
+5.2 Feedback. Any feedback, suggestions, or improvements you provide regarding the Software may be used by Licensor without restriction or compensation.
+
+6. PRIVACY AND DATA
+
+6.1 Data Collection. The Software may collect usage data and license validation information as described in the Privacy Policy.
+
+6.2 AWS Credentials. The Software stores AWS credentials locally on your device using secure system mechanisms. Licensor does not have access to your AWS credentials or data.
+
+6.3 No Data Transmission. Your AWS data accessed through the Software remains on your device and AWS infrastructure. Licensor does not access, store, or transmit your AWS data.
+
+7. UPDATES AND SUPPORT
+
+7.1 Updates. Licensor may provide updates to the Software. Updates are subject to this Agreement unless accompanied by separate terms.
+
+7.2 Support. Support services, if any, are provided at Licensor's discretion and may be subject to separate terms.
+
+8. WARRANTY DISCLAIMER
+
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. LICENSOR DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. LICENSOR DOES NOT WARRANT THAT THE SOFTWARE WILL BE ERROR-FREE OR OPERATE WITHOUT INTERRUPTION.
+
+9. LIMITATION OF LIABILITY
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL LICENSOR BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, OR USE, ARISING OUT OF OR RELATING TO THIS AGREEMENT OR THE SOFTWARE, REGARDLESS OF THE THEORY OF LIABILITY AND EVEN IF LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. LICENSOR'S TOTAL LIABILITY UNDER THIS AGREEMENT SHALL NOT EXCEED THE AMOUNT PAID BY YOU FOR THE SOFTWARE IN THE TWELVE MONTHS PRECEDING THE CLAIM.
+
+10. INDEMNIFICATION
+
+You agree to indemnify, defend, and hold harmless Licensor from and against any claims, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or relating to your use of the Software, your violation of this Agreement, or your violation of applicable laws.
+
+11. TERMINATION
+
+11.1 Termination by You. You may terminate this Agreement at any time by uninstalling the Software and destroying all copies.
+
+11.2 Termination by Licensor. Licensor may terminate this Agreement immediately if you breach any provision of this Agreement.
+
+11.3 Effect of Termination. Upon termination, all rights granted to you under this Agreement cease immediately, and you must uninstall the Software and destroy all copies.
+
+12. EXPORT COMPLIANCE
+
+You acknowledge that the Software may be subject to export control laws and regulations. You agree to comply with all applicable export control laws and not to export, re-export, or transfer the Software in violation of such laws.
+
+13. GOVERNING LAW
+
+This Agreement shall be governed by and construed in accordance with the laws of the State of Texas, United States of America, without regard to conflict of law principles. Any disputes arising under this Agreement shall be subject to the exclusive jurisdiction of the courts of Texas.
+
+14. GENERAL PROVISIONS
+
+14.1 Entire Agreement. This Agreement constitutes the entire agreement between you and Licensor regarding the Software and supersedes all prior agreements and understandings.
+
+14.2 Amendment. This Agreement may only be amended by a written instrument signed by Licensor.
+
+14.3 Severability. If any provision of this Agreement is held invalid or unenforceable, the remaining provisions shall remain in full force and effect.
+
+14.4 Waiver. No waiver of any provision of this Agreement shall be deemed or shall constitute a waiver of any other provision.
+
+14.5 Assignment. You may not assign this Agreement without Licensor's prior written consent. Licensor may assign this Agreement without restriction.
+
+14.6 Contact Information. For questions regarding this Agreement, contact: support@dinodb.app
+
+BY INSTALLING OR USING THE SOFTWARE, YOU ACKNOWLEDGE THAT YOU HAVE READ THIS AGREEMENT, UNDERSTAND IT, AND AGREE TO BE BOUND BY ITS TERMS AND CONDITIONS.
+
+Last Updated: January 2025

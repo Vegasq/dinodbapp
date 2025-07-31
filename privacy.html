@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - DinoDB</title>
+    <meta name="description" content="Privacy Policy for DinoDB - Professional DynamoDB client for macOS">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ2VQMHEC1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PZ2VQMHEC1');
+    </script>
+    
+    <style>
+        :root {
+            --primary-color: #007AFF;
+            --secondary-color: #5AC8FA;
+            --background-dark: #1C1C1E;
+            --background-light: #F2F2F7;
+            --text-primary: #FFFFFF;
+            --text-secondary: #8E8E93;
+            --card-background: #2C2C2E;
+            --gradient-primary: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--background-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+        
+        .logo img {
+            width: 32px;
+        }
+        
+        .back-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Main Content */
+        .main {
+            padding: 60px 0;
+        }
+        
+        .content {
+            background: var(--card-background);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+        }
+        
+        .page-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        
+        .legal-content {
+            max-width: none;
+        }
+        
+        .legal-content h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        
+        .legal-content h2 {
+            font-size: 1.5rem;
+            margin: 30px 0 15px 0;
+            color: var(--text-primary);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+        }
+        
+        .legal-content h3 {
+            font-size: 1.2rem;
+            margin: 25px 0 10px 0;
+            color: var(--secondary-color);
+        }
+        
+        .legal-content p {
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        .legal-content ul, .legal-content ol {
+            margin-bottom: 15px;
+            padding-left: 30px;
+        }
+        
+        .legal-content li {
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .legal-content strong {
+            color: var(--text-primary);
+        }
+        
+        .legal-content em {
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+        
+        .legal-content a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .legal-content a:hover {
+            text-decoration: underline;
+        }
+        
+        .effective-date {
+            background: rgba(0, 122, 255, 0.1);
+            border-left: 4px solid var(--primary-color);
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .privacy-highlight {
+            background: rgba(52, 199, 89, 0.1);
+            border-left: 4px solid #34C759;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .privacy-highlight h3 {
+            color: #34C759 !important;
+            margin-bottom: 10px;
+        }
+        
+        .contact-section {
+            background: rgba(90, 200, 250, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 1px solid rgba(90, 200, 250, 0.2);
+        }
+        
+        .footer-note {
+            text-align: center;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                padding: 25px;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .legal-content h1 {
+                font-size: 1.5rem;
+            }
+            
+            .legal-content h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="container nav">
+            <a href="index.html" class="logo">
+                <img src="dino.png" alt="DinoDB Logo">
+                DinoDB
+            </a>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <div class="content">
+                <h1 class="page-title">Privacy Policy</h1>
+                <p class="page-subtitle">How we protect your privacy and handle your data</p>
+                
+                <div class="legal-content">
+                    <div class="effective-date">
+                        <p><strong>Effective Date:</strong> January 2025<br>
+                        <strong>Last Updated:</strong> January 2025</p>
+                    </div>
+
+                    <h2>Overview</h2>
+                    <p>DinoDB is a macOS application developed by Mykola Yakovliev that helps users manage AWS DynamoDB tables. This Privacy Policy explains how we collect, use, and protect information when you use DinoDB.</p>
+
+                    <div class="privacy-highlight">
+                        <h3>🔒 Your Privacy is Our Priority</h3>
+                        <p>DinoDB is designed with privacy in mind. Your AWS data stays in your AWS account, your credentials are stored locally on your device, and we don't have access to your sensitive information.</p>
+                    </div>
+
+                    <h2>Information We Collect</h2>
+
+                    <h3>Information We Do NOT Collect</h3>
+                    <ul>
+                        <li><strong>Your AWS Data</strong>: DinoDB connects directly to your AWS services. We do not access, store, transmit, or have any visibility into your AWS data, DynamoDB tables, or database contents.</li>
+                        <li><strong>AWS Credentials</strong>: Your AWS credentials are stored securely on your local device using macOS Keychain Services. We never transmit or have access to your AWS credentials.</li>
+                        <li><strong>Personal Data</strong>: We do not collect personal information such as names, email addresses, or contact information through the application itself.</li>
+                    </ul>
+
+                    <h3>Information We Do Collect</h3>
+                    <p><strong>License Validation Data:</strong></p>
+                    <ul>
+                        <li>License key status and validation</li>
+                        <li>Application version information</li>
+                        <li>Basic system information (macOS version, hardware type) for compatibility</li>
+                    </ul>
+
+                    <p><strong>Usage Analytics (Optional):</strong></p>
+                    <ul>
+                        <li>Application launch and usage statistics</li>
+                        <li>Feature usage patterns (anonymized)</li>
+                        <li>Crash reports and error logs (no personal data included)</li>
+                        <li>Performance metrics</li>
+                    </ul>
+
+                    <p><strong>Local Application Data:</strong></p>
+                    <ul>
+                        <li>Application preferences and settings</li>
+                        <li>Account configurations (stored locally only)</li>
+                        <li>Usage logs for debugging purposes</li>
+                    </ul>
+
+                    <h2>How We Use Information</h2>
+                    <p>We use the limited information we collect to:</p>
+                    <ul>
+                        <li>Validate software licenses for commercial users</li>
+                        <li>Improve application performance and reliability</li>
+                        <li>Provide technical support when requested</li>
+                        <li>Develop new features based on usage patterns</li>
+                        <li>Ensure software security and prevent misuse</li>
+                    </ul>
+
+                    <h2>Data Storage and Security</h2>
+
+                    <h3>Local Storage</h3>
+                    <ul>
+                        <li>All your AWS configurations and application data are stored locally on your device</li>
+                        <li>AWS credentials are stored in macOS Keychain with system-level encryption</li>
+                        <li>Application preferences are stored in standard macOS user defaults</li>
+                    </ul>
+
+                    <h3>Remote Storage</h3>
+                    <ul>
+                        <li>License validation data is transmitted securely over HTTPS</li>
+                        <li>No personal data or AWS information is stored on our servers</li>
+                        <li>Usage analytics, if enabled, are anonymized and aggregated</li>
+                    </ul>
+
+                    <h2>Data Sharing</h2>
+                    <p>We do not sell, rent, or share your information with third parties, except:</p>
+                    <ul>
+                        <li><strong>License Validation</strong>: Encrypted license validation with our licensing service</li>
+                        <li><strong>Legal Requirements</strong>: When required by law or legal process</li>
+                        <li><strong>Service Providers</strong>: Minimal data sharing with essential service providers (e.g., analytics platforms) under strict confidentiality agreements</li>
+                    </ul>
+
+                    <h2>Your Rights and Choices</h2>
+
+                    <h3>Data Control</h3>
+                    <ul>
+                        <li><strong>AWS Data</strong>: Remains entirely under your control and never leaves your AWS environment</li>
+                        <li><strong>Local Data</strong>: You can delete all local application data by uninstalling DinoDB</li>
+                        <li><strong>Analytics</strong>: You can opt out of usage analytics in application settings</li>
+                    </ul>
+
+                    <h3>License Data</h3>
+                    <ul>
+                        <li>Commercial users can request information about their license validation data</li>
+                        <li>You can request deletion of license-related data upon license termination</li>
+                    </ul>
+
+                    <h2>Third-Party Services</h2>
+                    <p>DinoDB integrates with:</p>
+                    <ul>
+                        <li><strong>AWS Services</strong>: Direct connection using your credentials (no data shared with us)</li>
+                        <li><strong>macOS System Services</strong>: Keychain, notifications, system preferences</li>
+                        <li><strong>License Validation Service</strong>: Secure license verification only</li>
+                    </ul>
+
+                    <h2>Data Retention</h2>
+                    <ul>
+                        <li><strong>Local Data</strong>: Retained until you uninstall the application</li>
+                        <li><strong>License Data</strong>: Retained for the duration of your license plus reasonable period for support</li>
+                        <li><strong>Analytics Data</strong>: Aggregated data may be retained indefinitely for product improvement</li>
+                    </ul>
+
+                    <h2>International Users</h2>
+                    <p>DinoDB is designed for global use. By using the application:</p>
+                    <ul>
+                        <li>You consent to processing of license validation data in the United States</li>
+                        <li>All AWS data processing occurs within your chosen AWS regions</li>
+                        <li>We comply with applicable data protection laws including GDPR where applicable</li>
+                    </ul>
+
+                    <h2>Changes to This Policy</h2>
+                    <p>We may update this Privacy Policy from time to time. We will notify users of material changes through:</p>
+                    <ul>
+                        <li>Application updates with policy notifications</li>
+                        <li>Website announcements</li>
+                        <li>Direct communication for commercial license holders</li>
+                    </ul>
+
+                    <h2>Compliance</h2>
+                    <p>This Privacy Policy is designed to comply with:</p>
+                    <ul>
+                        <li>California Consumer Privacy Act (CCPA)</li>
+                        <li>General Data Protection Regulation (GDPR)</li>
+                        <li>Other applicable privacy laws and regulations</li>
+                    </ul>
+
+                    <div class="contact-section">
+                        <h2>Contact Information</h2>
+                        <p>For privacy-related questions or requests:</p>
+                        <p><strong>Developer:</strong> Mykola Yakovliev<br>
+                        <strong>Email:</strong> <a href="mailto:support@dinodb.app">support@dinodb.app</a><br>
+                        <strong>Website:</strong> <a href="https://dinodb.app">https://dinodb.app</a></p>
+                        <p>For technical support or general inquiries, please use the same contact information.</p>
+                    </div>
+
+                    <div class="footer-note">
+                        <p><em>By using DinoDB, you acknowledge that you have read and understood this Privacy Policy.</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
