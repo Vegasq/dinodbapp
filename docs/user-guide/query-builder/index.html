@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="DinoDB Team">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Query Builder &mdash; DinoDB Documentation</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../.." class="site-name"> DinoDB Documentation</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="../..">Home</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Getting Started</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../getting-started/overview/">Overview</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../getting-started/installation/">Installation</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../getting-started/quickstart/">Quick Start</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">User Guide</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../account-management/">Account Management</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../table-operations/">Table Operations</a></li>
+    <li class="toctree-l2 current"><a class="nav-item current" href="./">Query Builder</a>
+<ul class="subnav">
+<li class="toctree-l3"><a class="nav-item toc" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#query-types">Query Types</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#filter-expressions">Filter Expressions</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#visual-interface">Visual Interface</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#index-selection">Index Selection</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#advanced-features">Advanced Features</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#saved-queries">Saved Queries</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#best-practices">Best Practices</a></li>
+</ul></li>
+    <li class="toctree-l2"><a class="nav-item" href="../monitoring/">Monitoring & Metrics</a></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+    </div>
+    <div class="previous"><a href="../table-operations/">&laquo; Previous</a></div>
+    <div class="next"><a href="../monitoring/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../.." class="site-name"> DinoDB Documentation</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>User Guide</li>
+</ul>
+</nav>
+                <div id="content"><h1 id="query-builder">Query Builder<a class="headerlink" href="#query-builder" title="Permanent link">&para;</a></h1>
+<p>Visual interface for building complex DynamoDB queries without writing code.</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The Query Builder provides an intuitive way to construct DynamoDB queries and scans through a visual interface, making it accessible to users who aren't familiar with DynamoDB's query syntax.</p>
+<h2 id="query-types">Query Types<a class="headerlink" href="#query-types" title="Permanent link">&para;</a></h2>
+<h3 id="partition-key-queries">Partition Key Queries<a class="headerlink" href="#partition-key-queries" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Simple equality matching</li>
+<li>Required for all queries</li>
+<li>Efficient data retrieval</li>
+<li>Index-aware suggestions</li>
+</ul>
+<h3 id="sort-key-queries">Sort Key Queries<a class="headerlink" href="#sort-key-queries" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Range operations (&gt;, &lt;, &gt;=, &lt;=, between)</li>
+<li>Equality matching</li>
+<li>String prefix matching (begins_with)</li>
+<li>Combined with partition key queries</li>
+</ul>
+<h3 id="scan-operations">Scan Operations<a class="headerlink" href="#scan-operations" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Full table scans with filtering</li>
+<li>Parallel scan configuration</li>
+<li>Cost and performance warnings</li>
+<li>Progress tracking</li>
+</ul>
+<h2 id="filter-expressions">Filter Expressions<a class="headerlink" href="#filter-expressions" title="Permanent link">&para;</a></h2>
+<h3 id="attribute-conditions">Attribute Conditions<a class="headerlink" href="#attribute-conditions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Equality and inequality operators</li>
+<li>String operations (contains, begins_with)</li>
+<li>Numeric range queries</li>
+<li>Boolean and null checks</li>
+</ul>
+<h3 id="logical-operators">Logical Operators<a class="headerlink" href="#logical-operators" title="Permanent link">&para;</a></h3>
+<ul>
+<li>AND/OR combinations</li>
+<li>Complex nested conditions</li>
+<li>Parentheses grouping</li>
+<li>Condition precedence</li>
+</ul>
+<h3 id="function-support">Function Support<a class="headerlink" href="#function-support" title="Permanent link">&para;</a></h3>
+<ul>
+<li>size() for collection attributes</li>
+<li>attribute_exists() and attribute_not_exists()</li>
+<li>attribute_type() for type checking</li>
+<li>Custom function builder</li>
+</ul>
+<h2 id="visual-interface">Visual Interface<a class="headerlink" href="#visual-interface" title="Permanent link">&para;</a></h2>
+<h3 id="drag-and-drop-builder">Drag-and-Drop Builder<a class="headerlink" href="#drag-and-drop-builder" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Visual condition blocks</li>
+<li>Connecting operators</li>
+<li>Real-time syntax validation</li>
+<li>Preview of generated expressions</li>
+</ul>
+<h3 id="attribute-explorer">Attribute Explorer<a class="headerlink" href="#attribute-explorer" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Schema-aware attribute suggestions</li>
+<li>Type information display</li>
+<li>Example values</li>
+<li>Index utilization hints</li>
+</ul>
+<h3 id="query-preview">Query Preview<a class="headerlink" href="#query-preview" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Generated DynamoDB expression</li>
+<li>Estimated cost and performance</li>
+<li>Result count predictions</li>
+<li>Execution plan visualization</li>
+</ul>
+<h2 id="index-selection">Index Selection<a class="headerlink" href="#index-selection" title="Permanent link">&para;</a></h2>
+<h3 id="automatic-index-detection">Automatic Index Detection<a class="headerlink" href="#automatic-index-detection" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Global Secondary Index (GSI) suggestions</li>
+<li>Local Secondary Index (LSI) options</li>
+<li>Cost comparison between indexes</li>
+<li>Performance impact analysis</li>
+</ul>
+<h3 id="manual-index-override">Manual Index Override<a class="headerlink" href="#manual-index-override" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Force specific index usage</li>
+<li>Compare execution across indexes</li>
+<li>Index-specific limitations</li>
+<li>Capacity consumption estimates</li>
+</ul>
+<h2 id="advanced-features">Advanced Features<a class="headerlink" href="#advanced-features" title="Permanent link">&para;</a></h2>
+<h3 id="projection-expressions">Projection Expressions<a class="headerlink" href="#projection-expressions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Select specific attributes</li>
+<li>Reduce data transfer costs</li>
+<li>Nested attribute selection</li>
+<li>Expression validation</li>
+</ul>
+<h3 id="pagination-control">Pagination Control<a class="headerlink" href="#pagination-control" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Custom page sizes</li>
+<li>Bookmark-based pagination</li>
+<li>Parallel processing options</li>
+<li>Memory usage optimization</li>
+</ul>
+<h3 id="query-optimization">Query Optimization<a class="headerlink" href="#query-optimization" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Automatic query plan suggestions</li>
+<li>Cost optimization recommendations</li>
+<li>Performance bottleneck identification</li>
+<li>Alternative query strategies</li>
+</ul>
+<h2 id="saved-queries">Saved Queries<a class="headerlink" href="#saved-queries" title="Permanent link">&para;</a></h2>
+<h3 id="query-templates">Query Templates<a class="headerlink" href="#query-templates" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Save frequently used queries</li>
+<li>Parameterized query templates</li>
+<li>Team sharing capabilities</li>
+<li>Version control for queries</li>
+</ul>
+<h3 id="query-history">Query History<a class="headerlink" href="#query-history" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Recently executed queries</li>
+<li>Performance metrics tracking</li>
+<li>Result caching</li>
+<li>Quick re-execution</li>
+</ul>
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="performance-guidelines">Performance Guidelines<a class="headerlink" href="#performance-guidelines" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Prefer queries over scans</li>
+<li>Use appropriate indexes</li>
+<li>Limit result set sizes</li>
+<li>Monitor capacity consumption</li>
+</ul>
+<h3 id="cost-optimization">Cost Optimization<a class="headerlink" href="#cost-optimization" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Projection expressions for large items</li>
+<li>Efficient filter conditions</li>
+<li>Batch operations when possible</li>
+<li>Read capacity planning</li>
+</ul>
+<h3 id="security-considerations">Security Considerations<a class="headerlink" href="#security-considerations" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Attribute-level access control</li>
+<li>Query logging and auditing</li>
+<li>Sensitive data handling</li>
+<li>Rate limiting compliance</li>
+</ul>
+<p><em>This is a stub - full documentation will be generated from project source</em></p></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../table-operations/" title="Table Operations"><span>Previous</span></a></div>
+        <div class="next"><a href="../monitoring/" title="Monitoring & Metrics"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../search/main.js"></script>
+</body>
+
+</html>

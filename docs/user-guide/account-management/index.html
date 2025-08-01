@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="DinoDB Team">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Account Management &mdash; DinoDB Documentation</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../.." class="site-name"> DinoDB Documentation</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="../..">Home</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Getting Started</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../getting-started/overview/">Overview</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../getting-started/installation/">Installation</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../getting-started/quickstart/">Quick Start</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">User Guide</button>
+<ul class="subnav">
+    <li class="toctree-l2 current"><a class="nav-item current" href="./">Account Management</a>
+<ul class="subnav">
+<li class="toctree-l3"><a class="nav-item toc" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#aws-credentials-file-integration">AWS Credentials File Integration</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#adding-accounts">Adding Accounts</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#managing-accounts">Managing Accounts</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#account-details">Account Details</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#best-practices">Best Practices</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#troubleshooting">Troubleshooting</a></li>
+</ul></li>
+    <li class="toctree-l2"><a class="nav-item" href="../table-operations/">Table Operations</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../query-builder/">Query Builder</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../monitoring/">Monitoring & Metrics</a></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+    </div>
+    <div class="previous"><a href="../../getting-started/quickstart/">&laquo; Previous</a></div>
+    <div class="next"><a href="../table-operations/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../.." class="site-name"> DinoDB Documentation</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>User Guide</li>
+</ul>
+</nav>
+                <div id="content"><h1 id="account-management">Account Management<a class="headerlink" href="#account-management" title="Permanent link">&para;</a></h1>
+<p>Comprehensive guide to managing AWS accounts in DinoDB.</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>DinoDB supports two types of account storage:
+- <strong>AWS Profiles</strong>: Read from <code>~/.aws/credentials</code> (read-only)
+- <strong>Stored Accounts</strong>: Saved in DinoDB with Keychain security</p>
+<h2 id="aws-credentials-file-integration">AWS Credentials File Integration<a class="headerlink" href="#aws-credentials-file-integration" title="Permanent link">&para;</a></h2>
+<h3 id="automatic-discovery">Automatic Discovery<a class="headerlink" href="#automatic-discovery" title="Permanent link">&para;</a></h3>
+<p>DinoDB automatically discovers accounts from your AWS credentials file at <code>~/.aws/credentials</code>.</p>
+<h3 id="visual-distinction">Visual Distinction<a class="headerlink" href="#visual-distinction" title="Permanent link">&para;</a></h3>
+<ul>
+<li>AWS profiles show a document icon</li>
+<li>Cannot be edited or deleted from DinoDB</li>
+<li>Automatically reload when credentials file changes</li>
+</ul>
+<h3 id="supported-format">Supported Format<a class="headerlink" href="#supported-format" title="Permanent link">&para;</a></h3>
+<div class="language-ini highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">[default]</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="na">aws_access_key_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">YOUR_ACCESS_KEY</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="na">aws_secret_access_key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">YOUR_SECRET_KEY</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="na">region</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">us-east-1</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">[production]</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="na">aws_access_key_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">PROD_ACCESS_KEY</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="na">aws_secret_access_key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">PROD_SECRET_KEY</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="na">region</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">us-west-2</span>
+</span></code></pre></div>
+<h2 id="adding-accounts">Adding Accounts<a class="headerlink" href="#adding-accounts" title="Permanent link">&para;</a></h2>
+<h3 id="manual-account-creation">Manual Account Creation<a class="headerlink" href="#manual-account-creation" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click <strong>"Add Account"</strong> button</li>
+<li>Complete the form:</li>
+<li><strong>Name</strong>: Descriptive account name</li>
+<li><strong>Access Key ID</strong>: AWS access key</li>
+<li><strong>Secret Access Key</strong>: AWS secret key  </li>
+<li><strong>Region</strong>: Default AWS region</li>
+<li><strong>Description</strong>: Optional account description</li>
+<li><strong>Tags</strong>: Categorization labels</li>
+<li>Click <strong>"Save"</strong></li>
+</ol>
+<h3 id="security-features">Security Features<a class="headerlink" href="#security-features" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Credentials stored in macOS Keychain</li>
+<li>Never logged or stored in plain text</li>
+<li>Secure access with app-specific permissions</li>
+</ul>
+<h2 id="managing-accounts">Managing Accounts<a class="headerlink" href="#managing-accounts" title="Permanent link">&para;</a></h2>
+<h3 id="account-actions">Account Actions<a class="headerlink" href="#account-actions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Double-click</strong>: Connect to account</li>
+<li><strong>Right-click</strong>: Context menu with actions</li>
+<li><strong>Edit</strong>: Modify account details (stored accounts only)</li>
+<li><strong>Delete</strong>: Remove account (stored accounts only)</li>
+</ul>
+<h3 id="connection-status">Connection Status<a class="headerlink" href="#connection-status" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Connected</strong>: Blue outline border</li>
+<li><strong>Disconnected</strong>: Gray border</li>
+<li><strong>Error</strong>: Red border with error details</li>
+</ul>
+<h3 id="bulk-operations">Bulk Operations<a class="headerlink" href="#bulk-operations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Reload All</strong>: Refresh AWS profiles from file</li>
+<li><strong>Disconnect All</strong>: Close all active connections</li>
+</ul>
+<h2 id="account-details">Account Details<a class="headerlink" href="#account-details" title="Permanent link">&para;</a></h2>
+<h3 id="metadata-display">Metadata Display<a class="headerlink" href="#metadata-display" title="Permanent link">&para;</a></h3>
+<p>Each account card shows:
+- Account name and description
+- AWS region and tags
+- Connection status
+- Creation date (for stored accounts)
+- Profile source (AWS file vs. stored)</p>
+<h3 id="rich-tagging-system">Rich Tagging System<a class="headerlink" href="#rich-tagging-system" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Color-coded tag backgrounds</li>
+<li>Filtering by tags</li>
+<li>Quick identification of account types</li>
+</ul>
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use IAM users with minimal required permissions</li>
+<li>Regularly rotate access keys</li>
+<li>Never commit credentials to version control</li>
+<li>Use separate accounts for different environments</li>
+</ul>
+<h3 id="organization">Organization<a class="headerlink" href="#organization" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use descriptive account names</li>
+<li>Tag accounts by environment (prod, dev, staging)</li>
+<li>Group related accounts together</li>
+<li>Include region information in names</li>
+</ul>
+<h3 id="performance">Performance<a class="headerlink" href="#performance" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Limit concurrent connections</li>
+<li>Use regional accounts when possible</li>
+<li>Monitor CloudWatch costs</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="common-issues">Common Issues<a class="headerlink" href="#common-issues" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>No tables showing</strong>: Check IAM permissions</li>
+<li><strong>Connection timeout</strong>: Verify network and credentials</li>
+<li><strong>Profile not appearing</strong>: Check credentials file format</li>
+</ul>
+<h3 id="debug-information">Debug Information<a class="headerlink" href="#debug-information" title="Permanent link">&para;</a></h3>
+<p>Access debug logs for detailed connection information and error diagnosis.</p>
+<p><em>This is a stub - full documentation will be generated from project source</em></p></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../../getting-started/quickstart/" title="Quick Start"><span>Previous</span></a></div>
+        <div class="next"><a href="../table-operations/" title="Table Operations"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../search/main.js"></script>
+</body>
+
+</html>

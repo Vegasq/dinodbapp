@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="DinoDB Team">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Overview &mdash; DinoDB Documentation</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../.." class="site-name"> DinoDB Documentation</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="../..">Home</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Getting Started</button>
+<ul class="subnav">
+    <li class="toctree-l2 current"><a class="nav-item current" href="./">Overview</a>
+<ul class="subnav">
+<li class="toctree-l3"><a class="nav-item toc" href="#why-dinodb">Why DinoDB?</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#architecture">Architecture</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#target-users">Target Users</a></li>
+</ul></li>
+    <li class="toctree-l2"><a class="nav-item" href="../installation/">Installation</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../quickstart/">Quick Start</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">User Guide</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/account-management/">Account Management</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/table-operations/">Table Operations</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/query-builder/">Query Builder</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/monitoring/">Monitoring & Metrics</a></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+    </div>
+    <div class="previous"><a href="../..">&laquo; Previous</a></div>
+    <div class="next"><a href="../installation/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../.." class="site-name"> DinoDB Documentation</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>Getting Started</li>
+</ul>
+</nav>
+                <div id="content"><h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
+<p>DinoDB is a native macOS application designed to make working with AWS DynamoDB tables intuitive and efficient. Whether you're a developer, DevOps engineer, or data analyst, DinoDB provides the tools you need to manage your DynamoDB infrastructure.</p>
+<h2 id="why-dinodb">Why DinoDB?<a class="headerlink" href="#why-dinodb" title="Permanent link">&para;</a></h2>
+<h3 id="native-macos-experience">Native macOS Experience<a class="headerlink" href="#native-macos-experience" title="Permanent link">&para;</a></h3>
+<p>Built specifically for macOS using SwiftUI, DinoDB feels at home on your Mac with:
+- Native look and feel following macOS Human Interface Guidelines
+- System integration with Keychain for secure credential storage
+- Responsive design that adapts to your workspace</p>
+<h3 id="enterprise-ready-security">Enterprise-Ready Security<a class="headerlink" href="#enterprise-ready-security" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Secure credential storage in macOS Keychain</li>
+<li>Support for AWS credentials file integration</li>
+<li>No credentials ever logged or stored in plain text</li>
+<li>Multiple account management with visual distinction</li>
+</ul>
+<h3 id="real-time-monitoring">Real-Time Monitoring<a class="headerlink" href="#real-time-monitoring" title="Permanent link">&para;</a></h3>
+<ul>
+<li>CloudWatch integration for performance metrics</li>
+<li>Interactive charts with multiple time ranges</li>
+<li>Configurable metric alerts with system notifications</li>
+<li>Trend analysis and capacity monitoring</li>
+</ul>
+<h3 id="developer-friendly">Developer-Friendly<a class="headerlink" href="#developer-friendly" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Comprehensive debug logging system</li>
+<li>JSON syntax highlighting</li>
+<li>Query builder with visual interface</li>
+<li>Multiple view modes (Table and JSON)</li>
+</ul>
+<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
+<p>DinoDB is built using modern Swift technologies:</p>
+<ul>
+<li><strong>SwiftUI</strong>: Declarative UI framework for native macOS interface</li>
+<li><strong>SwiftData</strong>: Model persistence and account management</li>
+<li><strong>AWS SDK for Swift</strong>: Official AWS integration</li>
+<li><strong>Charts Framework</strong>: Native metric visualization</li>
+<li><strong>Keychain Services</strong>: Secure credential storage</li>
+</ul>
+<h2 id="target-users">Target Users<a class="headerlink" href="#target-users" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Developers</strong>: Debug and test DynamoDB applications</li>
+<li><strong>DevOps Engineers</strong>: Monitor table performance and capacity</li>
+<li><strong>Data Analysts</strong>: Query and analyze DynamoDB data</li>
+<li><strong>System Administrators</strong>: Manage multiple AWS accounts and regions</li>
+</ul></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../.." title="Home"><span>Previous</span></a></div>
+        <div class="next"><a href="../installation/" title="Installation"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../search/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="DinoDB Team">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Contributing &mdash; DinoDB Documentation</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../.." class="site-name"> DinoDB Documentation</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="../..">Home</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Getting Started</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../getting-started/overview/">Overview</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../getting-started/installation/">Installation</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../getting-started/quickstart/">Quick Start</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">User Guide</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/account-management/">Account Management</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/table-operations/">Table Operations</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/query-builder/">Query Builder</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/monitoring/">Monitoring & Metrics</a></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+    </div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../.." class="site-name"> DinoDB Documentation</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    
+</ul>
+</nav>
+                <div id="content"><h1 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permanent link">&para;</a></h1>
+<p>Guidelines for contributing to DinoDB development.</p>
+<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<h3 id="development-setup">Development Setup<a class="headerlink" href="#development-setup" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Fork the repository on GitHub</li>
+<li>Clone your fork locally</li>
+<li>Install Xcode 15.0 or later</li>
+<li>Open <code>DinoDB.xcodeproj</code></li>
+<li>Build and run the project</li>
+</ol>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<ul>
+<li>macOS 14.0+ for development</li>
+<li>Understanding of SwiftUI and SwiftData</li>
+<li>Familiarity with AWS DynamoDB</li>
+<li>Git workflow knowledge</li>
+</ul>
+<h2 id="development-guidelines">Development Guidelines<a class="headerlink" href="#development-guidelines" title="Permanent link">&para;</a></h2>
+<h3 id="code-style">Code Style<a class="headerlink" href="#code-style" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Follow Swift API Design Guidelines</li>
+<li>Use SwiftLint for consistent formatting</li>
+<li>Maintain existing architectural patterns</li>
+<li>Write self-documenting code</li>
+</ul>
+<h3 id="naming-conventions">Naming Conventions<a class="headerlink" href="#naming-conventions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Classes</strong>: PascalCase (e.g., <code>DynamoDBManager</code>)</li>
+<li><strong>Properties</strong>: camelCase (e.g., <code>tableName</code>)</li>
+<li><strong>Constants</strong>: camelCase (e.g., <code>defaultPageSize</code>)</li>
+<li><strong>Enums</strong>: PascalCase cases (e.g., <code>.loading</code>, <code>.loaded</code>)</li>
+</ul>
+<h3 id="file-organization">File Organization<a class="headerlink" href="#file-organization" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Group related functionality in folders</li>
+<li>Separate views, models, and managers</li>
+<li>Keep files under 500 lines when possible</li>
+<li>Use extensions for protocol conformance</li>
+</ul>
+<h2 id="mandatory-requirements">Mandatory Requirements<a class="headerlink" href="#mandatory-requirements" title="Permanent link">&para;</a></h2>
+<h3 id="debug-logging">Debug Logging<a class="headerlink" href="#debug-logging" title="Permanent link">&para;</a></h3>
+<p><strong>ALL code changes MUST include comprehensive debug logging:</strong></p>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Log user actions</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">DebugLogger</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="s">&quot;User clicked refresh button&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">category</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;UserAction&quot;</span><span class="p">)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// Time AWS operations</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kd">let</span><span class="w"> </span><span class="nv">timer</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">DebugLogger</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">startTimer</span><span class="p">()</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">// ... AWS operation</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">DebugLogger</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">endTimer</span><span class="p">(</span><span class="n">timer</span><span class="p">,</span><span class="w"> </span><span class="n">operation</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ListTables&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">category</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;AWS&quot;</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1">// Log errors with context</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">DebugLogger</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="s">&quot;Failed to connect: </span><span class="si">\(</span><span class="n">error</span><span class="si">)</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">category</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Error&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="required-categories">Required Categories<a class="headerlink" href="#required-categories" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>UserAction</strong>: All direct user interactions</li>
+<li><strong>AWS</strong>: DynamoDB and CloudWatch API calls</li>
+<li><strong>DataOp</strong>: CRUD operations</li>
+<li><strong>Auth</strong>: Authentication events</li>
+<li><strong>Performance</strong>: Operations &gt;100ms</li>
+<li><strong>Error</strong>: All error conditions</li>
+</ul>
+<h3 id="security-requirements">Security Requirements<a class="headerlink" href="#security-requirements" title="Permanent link">&para;</a></h3>
+<ul>
+<li>❌ <strong>NEVER log</strong>: AWS credentials, PII, sensitive data</li>
+<li>✅ <strong>Safe to log</strong>: Account names, table names, counts, errors</li>
+<li>Always use appropriate log categories</li>
+<li>Include context but protect privacy</li>
+</ul>
+<h2 id="pull-request-process">Pull Request Process<a class="headerlink" href="#pull-request-process" title="Permanent link">&para;</a></h2>
+<h3 id="before-submitting">Before Submitting<a class="headerlink" href="#before-submitting" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Add comprehensive logging</strong> to all new code</li>
+<li>Write or update unit tests</li>
+<li>Run full test suite</li>
+<li>Update documentation if needed</li>
+<li>Test debug panel functionality</li>
+</ol>
+<h3 id="pr-checklist">PR Checklist<a class="headerlink" href="#pr-checklist" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Debug logging added with appropriate categories</li>
+<li>[ ] No sensitive data in logs</li>
+<li>[ ] Tests pass with &gt;90% coverage</li>
+<li>[ ] No SwiftLint warnings</li>
+<li>[ ] Documentation updated</li>
+<li>[ ] Debug panel tested</li>
+</ul>
+<h3 id="pr-description-template">PR Description Template<a class="headerlink" href="#pr-description-template" title="Permanent link">&para;</a></h3>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gu">## Summary</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Brief description of changes
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="gu">## Changes Made</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">-</span><span class="w"> </span>Detailed list of modifications
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">-</span><span class="w"> </span>New features or bug fixes
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">-</span><span class="w"> </span>Performance improvements
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="gu">## Testing</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">-</span><span class="w"> </span>Unit tests added/updated
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="k">-</span><span class="w"> </span>Manual testing performed
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="k">-</span><span class="w"> </span>Debug logging verified
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="gu">## Debug Logging</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="k">-</span><span class="w"> </span>Categories used: UserAction, AWS, DataOp, etc.
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="k">-</span><span class="w"> </span>No sensitive data logged
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="k">-</span><span class="w"> </span>Debug panel functionality tested
+</span></code></pre></div>
+<h2 id="testing-requirements">Testing Requirements<a class="headerlink" href="#testing-requirements" title="Permanent link">&para;</a></h2>
+<h3 id="unit-tests">Unit Tests<a class="headerlink" href="#unit-tests" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Swift Testing Framework</strong>: Use modern testing patterns</li>
+<li><strong>90% Coverage</strong>: Target for all new code</li>
+<li><strong>Mock AWS Services</strong>: Isolated testing</li>
+<li><strong>Async Testing</strong>: Proper concurrent testing</li>
+</ul>
+<h3 id="integration-tests">Integration Tests<a class="headerlink" href="#integration-tests" title="Permanent link">&para;</a></h3>
+<ul>
+<li>End-to-end user workflows</li>
+<li>AWS service integration</li>
+<li>Error handling scenarios</li>
+<li>Performance benchmarks</li>
+</ul>
+<h3 id="manual-testing">Manual Testing<a class="headerlink" href="#manual-testing" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Test in both light and dark themes</li>
+<li>Verify keyboard shortcuts work</li>
+<li>Check accessibility features</li>
+<li>Validate debug panel output</li>
+</ul>
+<h2 id="code-review-process">Code Review Process<a class="headerlink" href="#code-review-process" title="Permanent link">&para;</a></h2>
+<h3 id="review-criteria">Review Criteria<a class="headerlink" href="#review-criteria" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Logging Compliance</strong>: Comprehensive debug logging</li>
+<li><strong>Security</strong>: No credential exposure in logs</li>
+<li><strong>Architecture</strong>: Follows MVVM patterns</li>
+<li><strong>Performance</strong>: Efficient async operations</li>
+<li><strong>Testing</strong>: Adequate test coverage</li>
+<li><strong>Documentation</strong>: Clear and accurate</li>
+</ol>
+<h3 id="reviewer-responsibilities">Reviewer Responsibilities<a class="headerlink" href="#reviewer-responsibilities" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Verify debug logging requirements</li>
+<li>Check for security vulnerabilities</li>
+<li>Validate architectural consistency</li>
+<li>Ensure test coverage</li>
+<li>Review documentation updates</li>
+</ul>
+<h2 id="release-process">Release Process<a class="headerlink" href="#release-process" title="Permanent link">&para;</a></h2>
+<h3 id="version-management">Version Management<a class="headerlink" href="#version-management" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Follow semantic versioning (MAJOR.MINOR.PATCH)</li>
+<li>Tag releases in Git</li>
+<li>Update changelog</li>
+<li>Build release notes</li>
+</ul>
+<h3 id="quality-gates">Quality Gates<a class="headerlink" href="#quality-gates" title="Permanent link">&para;</a></h3>
+<ul>
+<li>All tests must pass</li>
+<li>Code coverage &gt;90%</li>
+<li>No critical security issues</li>
+<li>Performance benchmarks met</li>
+<li>Debug logging verified</li>
+</ul>
+<h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
+<h3 id="required-updates">Required Updates<a class="headerlink" href="#required-updates" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Update CLAUDE.md for architectural changes</li>
+<li>Add inline code documentation</li>
+<li>Update user-facing documentation</li>
+<li>Include examples and usage patterns</li>
+</ul>
+<h3 id="documentation-standards">Documentation Standards<a class="headerlink" href="#documentation-standards" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Clear, concise language</li>
+<li>Code examples with proper syntax highlighting</li>
+<li>Screenshots for UI changes</li>
+<li>Architecture diagrams for complex features</li>
+</ul>
+<h2 id="community-guidelines">Community Guidelines<a class="headerlink" href="#community-guidelines" title="Permanent link">&para;</a></h2>
+<h3 id="communication">Communication<a class="headerlink" href="#communication" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Be respectful and inclusive</li>
+<li>Provide constructive feedback</li>
+<li>Ask questions when unclear</li>
+<li>Share knowledge openly</li>
+</ul>
+<h3 id="issue-reporting">Issue Reporting<a class="headerlink" href="#issue-reporting" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use provided issue templates</li>
+<li>Include reproduction steps</li>
+<li>Provide system information</li>
+<li>Include debug logs (without sensitive data)</li>
+</ul>
+<h3 id="feature-requests">Feature Requests<a class="headerlink" href="#feature-requests" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Explain the use case clearly</li>
+<li>Consider existing patterns</li>
+<li>Discuss implementation approaches</li>
+<li>Consider maintenance burden</li>
+</ul>
+<p><em>This is a stub - full documentation will be generated from project source</em></p></div>
+                <footer>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../search/main.js"></script>
+</body>
+
+</html>

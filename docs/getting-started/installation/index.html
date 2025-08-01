@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="DinoDB Team">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Installation &mdash; DinoDB Documentation</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../.." class="site-name"> DinoDB Documentation</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="../..">Home</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Getting Started</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../overview/">Overview</a></li>
+    <li class="toctree-l2 current"><a class="nav-item current" href="./">Installation</a>
+<ul class="subnav">
+<li class="toctree-l3"><a class="nav-item toc" href="#system-requirements">System Requirements</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#download-options">Download Options</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#first-launch">First Launch</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#aws-prerequisites">AWS Prerequisites</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#verification">Verification</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#next-steps">Next Steps</a></li>
+</ul></li>
+    <li class="toctree-l2"><a class="nav-item" href="../quickstart/">Quick Start</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">User Guide</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/account-management/">Account Management</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/table-operations/">Table Operations</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/query-builder/">Query Builder</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/monitoring/">Monitoring & Metrics</a></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+    </div>
+    <div class="previous"><a href="../overview/">&laquo; Previous</a></div>
+    <div class="next"><a href="../quickstart/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../.." class="site-name"> DinoDB Documentation</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>Getting Started</li>
+</ul>
+</nav>
+                <div id="content"><h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
+<h2 id="system-requirements">System Requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>macOS</strong>: 14.0 (Sonoma) or later</li>
+<li><strong>Architecture</strong>: Intel or Apple Silicon (M1/M2/M3)</li>
+<li><strong>RAM</strong>: 4GB minimum, 8GB recommended</li>
+<li><strong>Storage</strong>: 100MB free space</li>
+</ul>
+<h2 id="download-options">Download Options<a class="headerlink" href="#download-options" title="Permanent link">&para;</a></h2>
+<h3 id="option-1-direct-download-recommended">Option 1: Direct Download (Recommended)<a class="headerlink" href="#option-1-direct-download-recommended" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Visit <a href="https://dinodb.app">dinodb.app</a></li>
+<li>Click "Download for macOS"</li>
+<li>Open the downloaded DMG file</li>
+<li>Drag DinoDB to your Applications folder</li>
+</ol>
+<h3 id="option-2-github-releases">Option 2: GitHub Releases<a class="headerlink" href="#option-2-github-releases" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Go to <a href="https://github.com/vegasq/dinodbapp/releases">GitHub Releases</a></li>
+<li>Download the latest <code>DinoDB.dmg</code> file</li>
+<li>Follow the same installation steps as above</li>
+</ol>
+<h2 id="first-launch">First Launch<a class="headerlink" href="#first-launch" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Open DinoDB from Applications folder</li>
+<li>If you see a security warning:</li>
+<li>Go to <strong>System Settings</strong> &gt; <strong>Privacy &amp; Security</strong></li>
+<li>Click "Open Anyway" next to the DinoDB warning</li>
+<li>Confirm by clicking "Open" in the dialog</li>
+</ol>
+<h2 id="aws-prerequisites">AWS Prerequisites<a class="headerlink" href="#aws-prerequisites" title="Permanent link">&para;</a></h2>
+<p>Before using DinoDB, ensure you have:</p>
+<h3 id="aws-account">AWS Account<a class="headerlink" href="#aws-account" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Active AWS account with DynamoDB access</li>
+<li>IAM user or role with appropriate permissions</li>
+</ul>
+<h3 id="required-aws-permissions">Required AWS Permissions<a class="headerlink" href="#required-aws-permissions" title="Permanent link">&para;</a></h3>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;Statement&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">            </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">                </span><span class="s2">&quot;dynamodb:ListTables&quot;</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">                </span><span class="s2">&quot;dynamodb:DescribeTable&quot;</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">                </span><span class="s2">&quot;dynamodb:Scan&quot;</span><span class="p">,</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">                </span><span class="s2">&quot;dynamodb:Query&quot;</span><span class="p">,</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">                </span><span class="s2">&quot;dynamodb:GetItem&quot;</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">                </span><span class="s2">&quot;dynamodb:PutItem&quot;</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">                </span><span class="s2">&quot;dynamodb:UpdateItem&quot;</span><span class="p">,</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">                </span><span class="s2">&quot;dynamodb:DeleteItem&quot;</span><span class="p">,</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">                </span><span class="s2">&quot;dynamodb:CreateTable&quot;</span><span class="p">,</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">                </span><span class="s2">&quot;dynamodb:DeleteTable&quot;</span><span class="p">,</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">                </span><span class="s2">&quot;cloudwatch:GetMetricStatistics&quot;</span><span class="p">,</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">                </span><span class="s2">&quot;cloudwatch:ListMetrics&quot;</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">            </span><span class="p">],</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">            </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;*&quot;</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="p">]</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="aws-credentials-setup">AWS Credentials Setup<a class="headerlink" href="#aws-credentials-setup" title="Permanent link">&para;</a></h3>
+<p>Choose one of these methods:</p>
+<h4 id="method-1-aws-credentials-file">Method 1: AWS Credentials File<a class="headerlink" href="#method-1-aws-credentials-file" title="Permanent link">&para;</a></h4>
+<p>Create <code>~/.aws/credentials</code> with:
+<div class="language-ini highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">[default]</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="na">aws_access_key_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">YOUR_ACCESS_KEY</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="na">aws_secret_access_key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">YOUR_SECRET_KEY</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="na">region</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">us-east-1</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">[production]</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="na">aws_access_key_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">PROD_ACCESS_KEY</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="na">aws_secret_access_key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">PROD_SECRET_KEY</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="na">region</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">us-west-2</span>
+</span></code></pre></div></p>
+<h4 id="method-2-dinodb-account-storage">Method 2: DinoDB Account Storage<a class="headerlink" href="#method-2-dinodb-account-storage" title="Permanent link">&para;</a></h4>
+<p>Add accounts directly in DinoDB (stored securely in Keychain):
+1. Launch DinoDB
+2. Click "Add Account"
+3. Enter your AWS credentials
+4. Click "Save"</p>
+<h2 id="verification">Verification<a class="headerlink" href="#verification" title="Permanent link">&para;</a></h2>
+<p>After installation:</p>
+<ol>
+<li>Launch DinoDB</li>
+<li>You should see either:</li>
+<li>Your AWS profiles (if using credentials file)</li>
+<li>Welcome screen to add accounts</li>
+<li>Double-click an account to connect</li>
+<li>Verify you can see your DynamoDB tables</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="app-cant-be-opened-error">"App can't be opened" Error<a class="headerlink" href="#app-cant-be-opened-error" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Check that you have macOS 14.0 or later</li>
+<li>Try the security override steps above</li>
+</ul>
+<h3 id="no-tables-showing">No Tables Showing<a class="headerlink" href="#no-tables-showing" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Verify AWS credentials have correct permissions</li>
+<li>Check that you're in the correct AWS region</li>
+<li>Ensure tables exist in your AWS account</li>
+</ul>
+<h3 id="connection-issues">Connection Issues<a class="headerlink" href="#connection-issues" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Verify internet connectivity</li>
+<li>Check AWS service status</li>
+<li>Confirm credentials are not expired</li>
+</ul>
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<p>Once installed, continue to the <a href="../quickstart/">Quick Start Guide</a> to begin using DinoDB.</p></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../overview/" title="Overview"><span>Previous</span></a></div>
+        <div class="next"><a href="../quickstart/" title="Quick Start"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../search/main.js"></script>
+</body>
+
+</html>

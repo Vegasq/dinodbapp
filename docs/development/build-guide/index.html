@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="DinoDB Team">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Build Guide &mdash; DinoDB Documentation</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../.." class="site-name"> DinoDB Documentation</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1"><a class="nav-item" href="../..">Home</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Getting Started</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../getting-started/overview/">Overview</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../getting-started/installation/">Installation</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../getting-started/quickstart/">Quick Start</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">User Guide</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/account-management/">Account Management</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/table-operations/">Table Operations</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/query-builder/">Query Builder</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../user-guide/monitoring/">Monitoring & Metrics</a></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+    </div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../.." class="site-name"> DinoDB Documentation</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    
+</ul>
+</nav>
+                <div id="content"><h1 id="build-guide">Build Guide<a class="headerlink" href="#build-guide" title="Permanent link">&para;</a></h1>
+<p>Complete guide to building DinoDB from source.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<h3 id="development-environment">Development Environment<a class="headerlink" href="#development-environment" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Xcode</strong>: 15.0 or later</li>
+<li><strong>macOS</strong>: 14.0 (Sonoma) or later for development</li>
+<li><strong>Swift</strong>: 5.9 or later</li>
+<li><strong>Git</strong>: For source control</li>
+</ul>
+<h3 id="required-sdks">Required SDKs<a class="headerlink" href="#required-sdks" title="Permanent link">&para;</a></h3>
+<ul>
+<li>AWS SDK for Swift v1.0+</li>
+<li>SwiftUI and SwiftData frameworks</li>
+<li>CloudWatch SDK components</li>
+</ul>
+<h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
+<h3 id="clone-repository">Clone Repository<a class="headerlink" href="#clone-repository" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/vegasq/dinodbapp.git
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>dinodbapp
+</span></code></pre></div>
+<h3 id="standard-build">Standard Build<a class="headerlink" href="#standard-build" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>xcodebuild<span class="w"> </span>-project<span class="w"> </span>DinoDB.xcodeproj<span class="w"> </span>-scheme<span class="w"> </span>DinoDB<span class="w"> </span>-configuration<span class="w"> </span>Debug<span class="w"> </span>build
+</span></code></pre></div>
+<h3 id="clean-build">Clean Build<a class="headerlink" href="#clean-build" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>xcodebuild<span class="w"> </span>-project<span class="w"> </span>DinoDB.xcodeproj<span class="w"> </span>-scheme<span class="w"> </span>DinoDB<span class="w"> </span>clean<span class="w"> </span>build
+</span></code></pre></div>
+<h2 id="build-configurations">Build Configurations<a class="headerlink" href="#build-configurations" title="Permanent link">&para;</a></h2>
+<h3 id="debug-configuration">Debug Configuration<a class="headerlink" href="#debug-configuration" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Full debugging symbols</li>
+<li>Debug logging enabled</li>
+<li>Development provisioning</li>
+<li>Faster compilation</li>
+</ul>
+<h3 id="release-configuration">Release Configuration<a class="headerlink" href="#release-configuration" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Optimized performance</li>
+<li>Reduced binary size</li>
+<li>Distribution provisioning</li>
+<li>Production-ready build</li>
+</ul>
+<h2 id="project-structure">Project Structure<a class="headerlink" href="#project-structure" title="Permanent link">&para;</a></h2>
+<h3 id="core-directories">Core Directories<a class="headerlink" href="#core-directories" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>DinoDB/
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>├── Models/           # SwiftData models
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>├── Views/           # SwiftUI views
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>├── Managers/        # Business logic
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>├── Documentation/   # Technical docs
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>└── Tests/          # Unit and UI tests
+</span></code></pre></div>
+<h3 id="key-files">Key Files<a class="headerlink" href="#key-files" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>DinoDBApp.swift</code>: Application entry point</li>
+<li><code>ContentView.swift</code>: Main navigation interface</li>
+<li><code>DynamoDBManager.swift</code>: AWS integration</li>
+<li><code>Account.swift</code>: Core data model</li>
+</ul>
+<h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h2>
+<h3 id="aws-sdk-for-swift">AWS SDK for Swift<a class="headerlink" href="#aws-sdk-for-swift" title="Permanent link">&para;</a></h3>
+<ul>
+<li>DynamoDB client integration</li>
+<li>CloudWatch metrics support</li>
+<li>Automatic dependency resolution</li>
+<li>Version compatibility matrix</li>
+</ul>
+<h3 id="swiftui-frameworks">SwiftUI Frameworks<a class="headerlink" href="#swiftui-frameworks" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Native macOS interface components</li>
+<li>Charts framework for metrics</li>
+<li>UserNotifications for alerts</li>
+<li>Keychain Services for security</li>
+</ul>
+<h2 id="build-scripts">Build Scripts<a class="headerlink" href="#build-scripts" title="Permanent link">&para;</a></h2>
+<h3 id="automated-building">Automated Building<a class="headerlink" href="#automated-building" title="Permanent link">&para;</a></h3>
+<p>The project includes build automation scripts for common scenarios:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Full build with tests</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>./scripts/build-full.sh
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># Quick development build</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>./scripts/build-dev.sh
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Release build with signing</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>./scripts/build-release.sh
+</span></code></pre></div>
+<h2 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h2>
+<h3 id="unit-tests">Unit Tests<a class="headerlink" href="#unit-tests" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>xcodebuild<span class="w"> </span><span class="nb">test</span><span class="w"> </span>-project<span class="w"> </span>DinoDB.xcodeproj<span class="w"> </span>-scheme<span class="w"> </span>DinoDB<span class="w"> </span>-only-testing:DinoDBTests
+</span></code></pre></div>
+<h3 id="ui-tests">UI Tests<a class="headerlink" href="#ui-tests" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>xcodebuild<span class="w"> </span><span class="nb">test</span><span class="w"> </span>-project<span class="w"> </span>DinoDB.xcodeproj<span class="w"> </span>-scheme<span class="w"> </span>DinoDB<span class="w"> </span>-only-testing:DinoDBUITests
+</span></code></pre></div>
+<h3 id="code-coverage">Code Coverage<a class="headerlink" href="#code-coverage" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>xcodebuild<span class="w"> </span><span class="nb">test</span><span class="w"> </span>-project<span class="w"> </span>DinoDB.xcodeproj<span class="w"> </span>-scheme<span class="w"> </span>DinoDB<span class="w"> </span>-enableCodeCoverage<span class="w"> </span>YES
+</span></code></pre></div>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="common-build-issues">Common Build Issues<a class="headerlink" href="#common-build-issues" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>SDK Version Mismatch</strong>: Update Xcode and Swift</li>
+<li><strong>Dependency Conflicts</strong>: Clean derived data</li>
+<li><strong>Signing Issues</strong>: Check provisioning profiles</li>
+<li><strong>Architecture Errors</strong>: Verify target settings</li>
+</ul>
+<h3 id="debug-tools">Debug Tools<a class="headerlink" href="#debug-tools" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Xcode debugger integration</li>
+<li>Performance profiling tools</li>
+<li>Memory leak detection</li>
+<li>Network request monitoring</li>
+</ul>
+<h3 id="build-optimization">Build Optimization<a class="headerlink" href="#build-optimization" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Parallel build settings</li>
+<li>Compiler optimization flags</li>
+<li>Link-time optimization</li>
+<li>Dead code elimination</li>
+</ul>
+<p><em>This is a stub - full documentation will be generated from project source</em></p></div>
+                <footer>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../search/main.js"></script>
+</body>
+
+</html>
