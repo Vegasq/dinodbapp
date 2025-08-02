@@ -121,7 +121,7 @@
                 <div class="feature-card">
                     <div class="feature-icon">🔑</div>
                     <h3>AWS SSO Integration</h3>
-                    <p>Seamlessly integrate with AWS Single Sign-On for enterprise authentication. Access multiple AWS accounts with federated credentials (Commercial license only).</p>
+                    <p>Seamlessly integrate with AWS Single Sign-On for enterprise authentication. Access multiple AWS accounts with federated credentials (DinoDB PRO only).</p>
                 </div>
             </div>
         </div>
@@ -307,7 +307,7 @@
                 </div>
                 <div class="pricing-card featured">
                     <div class="pricing-badge">Most Value</div>
-                    <h3 class="pricing-tier">Commercial</h3>
+                    <h3 class="pricing-tier">DinoDB PRO</h3>
                     <div class="pricing-amount">
                         <span class="price">$5</span>
                         <span class="period">per seat/month</span>
@@ -324,7 +324,7 @@
                     <button onclick="startCommercialTrial()" class="btn btn-primary pricing-btn">Start Free Trial</button>
                 </div>
             </div>
-            <p class="pricing-note">Commercial licenses are billed per seat. Volume discounts available for teams. Powered by Paddle for secure payments.</p>
+            <p class="pricing-note">DinoDB PRO licenses are billed per seat. Volume discounts available for teams. Powered by Paddle for secure payments.</p>
         </div>
     </section>
 
@@ -694,21 +694,21 @@
         let konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]; // Up Up Down Down Left Right Left Right B A
         let konamiIndex = 0;
 
-        // Commercial license checkout
+        // DinoDB PRO license checkout
         function startCommercialTrial() {
             // Check if konami code has been entered
             if (!window.konamiUnlocked) {
-                alert('🚧 The premium version is not yet publicly available.\n\nWe\'re putting the finishing touches on the commercial features. Stay tuned for the official launch!\n\nFor early access or enterprise inquiries, please contact us.');
+                alert('🚧 DinoDB PRO is not yet publicly available.\n\nWe\'re putting the finishing touches on the PRO features. Stay tuned for the official launch!\n\nFor early access or enterprise inquiries, please contact us.');
                 return;
             }
             
             // Check if Paddle is properly configured
             if (!window.Paddle || !window.Paddle.Checkout) {
-                alert('Payment system is being configured. Please contact support for commercial licensing.');
+                alert('Payment system is being configured. Please contact support for DinoDB PRO licensing.');
                 return;
             }
             
-            // Replace with your actual Paddle product/price ID for commercial license
+            // Replace with your actual Paddle product/price ID for DinoDB PRO license
             openPaddleCheckout("pri_01k16wbxcnc48b6jrgntmze5dr");
         }
 
