@@ -89,9 +89,11 @@
 <p>DinoDB supports two types of account storage:
 - <strong>AWS Profiles</strong>: Read from <code>~/.aws/credentials</code> (read-only)
 - <strong>Stored Accounts</strong>: Saved in DinoDB with Keychain security</p>
+<p><img alt="Account Management Overview" src="../../assets/screenshots/account-management-overview.png" /></p>
 <h2 id="aws-credentials-file-integration">AWS Credentials File Integration<a class="headerlink" href="#aws-credentials-file-integration" title="Permanent link">&para;</a></h2>
 <h3 id="automatic-discovery">Automatic Discovery<a class="headerlink" href="#automatic-discovery" title="Permanent link">&para;</a></h3>
 <p>DinoDB automatically discovers accounts from your AWS credentials file at <code>~/.aws/credentials</code>.</p>
+<p><img alt="Accounts from AWS File" src="../../assets/screenshots/accounts-from-aws-file.png" /></p>
 <h3 id="visual-distinction">Visual Distinction<a class="headerlink" href="#visual-distinction" title="Permanent link">&para;</a></h3>
 <ul>
 <li>AWS profiles show a document icon</li>
@@ -113,6 +115,9 @@
 <h3 id="manual-account-creation">Manual Account Creation<a class="headerlink" href="#manual-account-creation" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Click <strong>"Add Account"</strong> button</li>
+</ol>
+<p><img alt="Add Account Button Main" src="../../assets/screenshots/add-account-button-main.png" /></p>
+<ol>
 <li>Complete the form:</li>
 <li><strong>Name</strong>: Descriptive account name</li>
 <li><strong>Access Key ID</strong>: AWS access key</li>
@@ -120,14 +125,19 @@
 <li><strong>Region</strong>: Default AWS region</li>
 <li><strong>Description</strong>: Optional account description</li>
 <li><strong>Tags</strong>: Categorization labels</li>
-<li>Click <strong>"Save"</strong></li>
 </ol>
+<p><img alt="Add Account Form" src="../../assets/screenshots/add-account-form.png" /></p>
+<ol>
+<li>Click **"Save"</li>
+</ol>
+<p><img alt="Account Save Success" src="../../assets/screenshots/account-save-success.png" /></p>
 <h3 id="security-features">Security Features<a class="headerlink" href="#security-features" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Credentials stored in macOS Keychain</li>
 <li>Never logged or stored in plain text</li>
 <li>Secure access with app-specific permissions</li>
 </ul>
+<p><img alt="Credential Security Keychain" src="../../assets/screenshots/credential-security-keychain.png" /></p>
 <h2 id="managing-accounts">Managing Accounts<a class="headerlink" href="#managing-accounts" title="Permanent link">&para;</a></h2>
 <h3 id="account-actions">Account Actions<a class="headerlink" href="#account-actions" title="Permanent link">&para;</a></h3>
 <ul>
@@ -136,12 +146,14 @@
 <li><strong>Edit</strong>: Modify account details (stored accounts only)</li>
 <li><strong>Delete</strong>: Remove account (stored accounts only)</li>
 </ul>
+<p><img alt="Right Click Open" src="../../assets/screenshots/right-click-open.png" /></p>
 <h3 id="connection-status">Connection Status<a class="headerlink" href="#connection-status" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Connected</strong>: Blue outline border</li>
 <li><strong>Disconnected</strong>: Gray border</li>
 <li><strong>Error</strong>: Red border with error details</li>
 </ul>
+<p><img alt="Account Connection Status" src="../../assets/screenshots/account-connection-status.png" /></p>
 <h3 id="bulk-operations">Bulk Operations<a class="headerlink" href="#bulk-operations" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Reload All</strong>: Refresh AWS profiles from file</li>
@@ -155,12 +167,14 @@
 - Connection status
 - Creation date (for stored accounts)
 - Profile source (AWS file vs. stored)</p>
+<p><img alt="Account Card Ready" src="../../assets/screenshots/account-card-ready.png" /></p>
 <h3 id="rich-tagging-system">Rich Tagging System<a class="headerlink" href="#rich-tagging-system" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Color-coded tag backgrounds</li>
 <li>Filtering by tags</li>
 <li>Quick identification of account types</li>
 </ul>
+<p><img alt="Account Tags System" src="../../assets/screenshots/account-tags-system.png" /></p>
 <h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
 <h3 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h3>
 <ul>
@@ -176,6 +190,7 @@
 <li>Group related accounts together</li>
 <li>Include region information in names</li>
 </ul>
+<p><img alt="Multiple Accounts" src="../../assets/screenshots/multiple-accounts.png" /></p>
 <h3 id="performance">Performance<a class="headerlink" href="#performance" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Limit concurrent connections</li>

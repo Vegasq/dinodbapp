@@ -2,9 +2,13 @@
 
 Visual interface for building complex DynamoDB queries without writing code.
 
+![Query Builder Complete](../assets/screenshots/query-builder-complete.png)
+
 ## Overview
 
 The Query Builder provides an intuitive way to construct DynamoDB queries and scans through a visual interface, making it accessible to users who aren't familiar with DynamoDB's query syntax.
+
+![Query Builder Interface](../assets/screenshots/query-builder-interface.png)
 
 ## Query Types
 
@@ -54,17 +58,23 @@ The Query Builder provides an intuitive way to construct DynamoDB queries and sc
 - Real-time syntax validation
 - Preview of generated expressions
 
+![Query Preview](../assets/screenshots/query-preview.png)
+
 ### Attribute Explorer
 - Schema-aware attribute suggestions
 - Type information display
 - Example values
 - Index utilization hints
 
+![Index Selection Dropdown](../assets/screenshots/index-selection-dropdown.png)
+
 ### Query Preview
 - Generated DynamoDB expression
 - Estimated cost and performance
 - Result count predictions
 - Execution plan visualization
+
+![Query Results](../assets/screenshots/query-results.png)
 
 ## Index Selection
 
@@ -107,6 +117,8 @@ The Query Builder provides an intuitive way to construct DynamoDB queries and sc
 - Parameterized query templates
 - Team sharing capabilities
 - Version control for queries
+
+![Saved Queries Panel](../assets/screenshots/saved-queries-panel.png)
 
 ### Query History
 - Recently executed queries

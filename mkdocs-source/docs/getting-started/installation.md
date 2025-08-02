@@ -12,21 +12,34 @@
 ### Option 1: Direct Download (Recommended)
 1. Visit [dinodb.app](https://dinodb.app)
 2. Click "Download for macOS"
+
+![Download from Website](../assets/screenshots/download-website.png)
+
 3. Open the downloaded DMG file
 4. Drag DinoDB to your Applications folder
+
+![DMG Installation](../assets/screenshots/dmg-installation.png)
 
 ### Option 2: GitHub Releases
 1. Go to [GitHub Releases](https://github.com/vegasq/dinodbapp/releases)
 2. Download the latest `DinoDB.dmg` file
+
+![GitHub Releases](../assets/screenshots/github-releases.png)
+
 3. Follow the same installation steps as above
 
 ## First Launch
 
 1. Open DinoDB from Applications folder
+
+![Applications Folder](../assets/screenshots/applications-folder.png)
+
 2. If you see a security warning:
    - Go to **System Settings** > **Privacy & Security**
    - Click "Open Anyway" next to the DinoDB warning
    - Confirm by clicking "Open" in the dialog
+
+![Security Warning](../assets/screenshots/security-warning.png)
 
 ## AWS Prerequisites
 
@@ -80,6 +93,8 @@ aws_access_key_id = PROD_ACCESS_KEY
 aws_secret_access_key = PROD_SECRET_KEY
 region = us-west-2
 ```
+
+![AWS Credentials File](../assets/screenshots/aws-credentials-file.png)
 
 #### Method 2: DinoDB Account Storage
 Add accounts directly in DinoDB (stored securely in Keychain):

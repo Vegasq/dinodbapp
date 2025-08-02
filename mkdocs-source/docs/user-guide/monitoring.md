@@ -2,6 +2,8 @@
 
 Real-time monitoring and alerting system integrated with AWS CloudWatch.
 
+![Monitoring Dashboard Full](../assets/screenshots/monitoring-dashboard-full.png)
+
 ## CloudWatch Integration
 
 ### Metrics Dashboard
@@ -9,6 +11,8 @@ Real-time monitoring and alerting system integrated with AWS CloudWatch.
 - Interactive charts using native SwiftUI Charts
 - Multiple time ranges (1h, 6h, 24h, 7d)
 - Automatic refresh every 60 seconds
+
+![Metrics Dashboard](../assets/screenshots/metrics-dashboard.png)
 
 ### Supported Metrics
 - **Capacity Metrics**: Read/Write capacity utilization
@@ -36,6 +40,8 @@ Real-time monitoring and alerting system integrated with AWS CloudWatch.
 - Performance status badges
 - Capacity utilization warnings
 
+![Performance Trends](../assets/screenshots/performance-trends.png)
+
 ## Metric Alerts
 
 ### Alert Configuration
@@ -43,6 +49,10 @@ Real-time monitoring and alerting system integrated with AWS CloudWatch.
 - Multiple severity levels (Info, Warning, Critical)
 - Custom alert names and descriptions
 - Flexible time windows
+
+![Alert Configuration Detailed](../assets/screenshots/alert-configuration-detailed.png)
+
+![Setup Alerts](../assets/screenshots/setup-alerts.png)
 
 ### Alert Types
 - **Threshold Alerts**: Trigger when metric exceeds limit
@@ -55,6 +65,8 @@ Real-time monitoring and alerting system integrated with AWS CloudWatch.
 - Visual alert banners in dashboard
 - Alert history and acknowledgment
 - Escalation procedures
+
+![Alert Notifications](../assets/screenshots/alert-notifications.png)
 
 ## Performance Monitoring
 
