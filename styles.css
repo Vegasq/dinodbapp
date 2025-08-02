@@ -989,6 +989,13 @@ body {
     margin: 0 0.5rem;
 }
 
+.footer-disclaimer {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-title {
