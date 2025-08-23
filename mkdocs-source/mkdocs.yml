@@ -21,6 +21,7 @@ nav:
     - Quick Start: getting-started/quickstart.md
   - User Guide:
     - Account Management: user-guide/account-management.md
+    - AWS SSO Integration: user-guide/sso-integration.md
     - Table Operations: user-guide/table-operations.md
     - Query Builder: user-guide/query-builder.md
     - Monitoring & Metrics: user-guide/monitoring.md
