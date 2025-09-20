@@ -37,7 +37,6 @@
 .hero-image {
     max-width: 100%;
     border-radius: 20px;
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
     margin-top: 40px;
 }
 
@@ -126,7 +125,6 @@
 .screenshot-card img {
     width: 100%;
     border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
