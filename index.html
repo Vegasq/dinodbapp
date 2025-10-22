@@ -35,13 +35,9 @@
                 DinoDB
             </a>
             <ul class="nav-links">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#screenshots">Screenshots</a></li>
-                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#pricing">Pro Version</a></li>
                 <li><a href="aws-setup.html">Setup Guide</a></li>
-                <li><a href="terms.html">Terms</a></li>
-                <li><a href="privacy.html">Privacy</a></li>
-                <li><a href="download.html" class="download-btn">Download</a></li>
+                <li><a href="https://github.com/Vegasq/dinodbapp/releases/download/25.10.1/DinoDB.dmg" class="download-btn">Download</a></li>
             </ul>
         </nav>
     </header>
@@ -49,62 +45,80 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Professional DynamoDB Management for macOS</h1>
-            <p>The most intuitive way to manage your AWS DynamoDB tables. With SSO authentication, SQL-like queries, and beautiful native macOS design.</p>
-            <div class="cta-buttons">
-                <a href="download.html" class="btn-primary">
-                    <span>Download for macOS</span>
-                    <span>↓</span>
-                </a>
-                <a href="aws-setup.html" class="btn-secondary">Setup Guide</a>
+            <div class="hero-content">
+                <h1>DynamoDB Client for macOS</h1>
+
+                <div class="hero-left">
+                    <p class="hero-subtitle">Native. Fast. <span class="highlight-free">FREE</span>.</p>
+                    <p class="hero-description">A no-nonsense DynamoDB GUI built for developers who need to get things done. No subscription. No BS. Just download and start querying.</p>
+
+                    <div class="download-box">
+                        <a href="https://github.com/Vegasq/dinodbapp/releases/download/25.10.1/DinoDB.dmg" class="btn-download" id="mainDownload">
+                            <span class="download-icon">⬇</span>
+                            <span class="download-text">
+                                <strong>Download FREE</strong>
+                                <small>macOS 12+ • 45MB • Intel & Apple Silicon</small>
+                            </span>
+                        </a>
+                        <div class="quick-install">
+                            <code>curl -L https://github.com/Vegasq/dinodbapp/releases/download/25.10.1/DinoDB.dmg -o DinoDB.dmg</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <img src="images/table_view.png" alt="DinoDB Main Interface" class="hero-image">
+                </div>
             </div>
-            <img src="images/table_view.png" alt="DinoDB Main Interface" class="hero-image">
         </div>
     </section>
 
     <!-- Features Section -->
+    <!--
     <section class="features" id="features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Everything you need to manage DynamoDB</h2>
-                <p class="section-subtitle">DinoDB combines powerful features with an intuitive interface, making database management effortless.</p>
+                <h2 class="section-title">Fully Functional. Actually Free.</h2>
+                <p class="section-subtitle">All core DynamoDB features included. Upgrade to Pro for SSO/OIDC and commercial use.</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🔐</div>
-                    <h3>AWS SSO Integration</h3>
-                    <p>Seamlessly connect using AWS Single Sign-On and multi-account support.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💾</div>
-                    <h3>Multiple Account Types</h3>
-                    <p>Support for SSO accounts, standard AWS profiles, and custom configurations all in one place.</p>
+                    <div class="feature-icon">🔑</div>
+                    <h3>Multi-Account Manager</h3>
+                    <p>Add multiple AWS accounts with access keys. Switch regions instantly. Credentials encrypted in macOS Keychain. No cloud sync required.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🔍</div>
-                    <h3>SQL-Like Queries</h3>
-                    <p>Write familiar SQL queries to interact with your DynamoDB tables.</p>
+                    <h3>PartiQL Queries</h3>
+                    <p>SQL-like query interface for DynamoDB. Scan, filter, and query with familiar syntax. Export results to DynamoDB JSON format.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
-                    <h3>Table Management</h3>
-                    <p>View table information, schema details and attribute definitions at a glance.</p>
+                    <h3>Table Inspector</h3>
+                    <p>View table schemas, GSI/LSI indexes, partition keys, and sort keys. Browse table metadata and configuration settings at a glance.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h3>Native macOS Design</h3>
-                    <p>Beautiful, responsive interface that feels right at home on macOS with dark mode support.</p>
+                    <div class="feature-icon">✏️</div>
+                    <h3>Full CRUD Operations</h3>
+                    <p>Create, read, update, delete items with visual editors. JSON mode for power users. Batch operations. Import/export support.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
-                    <h3>Fast & Secure</h3>
-                    <p>Local credential storage using macOS Keychain Services.</p>
+                    <h3>Native Swift App</h3>
+                    <p>100% native macOS built with SwiftUI. No Electron. No web wrappers. Optimized for Apple Silicon. Fast, lightweight, beautiful.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Privacy First</h3>
+                    <p>Zero telemetry. No tracking. No analytics. Your credentials never leave your Mac. All data stays local.</p>
                 </div>
             </div>
         </div>
     </section>
+    -->
 
     <!-- Screenshots Section -->
+    <!--
     <section class="screenshots" id="screenshots">
         <div class="container">
             <div class="section-header">
@@ -135,39 +149,21 @@
             </div>
         </div>
     </section>
+    -->
 
     <!-- Pricing Section -->
     <section class="pricing" id="pricing">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Choose Your Plan</h2>
-                <p class="section-subtitle">Start free for personal use or upgrade to Pro for commercial features.</p>
-            </div>
-            <div class="pricing-cards">
-                <div class="pricing-card">
-                    <h3 class="pricing-title">Personal</h3>
-                    <div class="pricing-price">Free</div>
-                    <div class="pricing-period">Forever</div>
-                    <ul class="pricing-features">
-                        <li>Full DynamoDB management</li>
-                        <li>Standard AWS profile support</li>
-                        <li>SQL-like query interface</li>
-                        <li>Table information views</li>
-                        <li>Personal use only</li>
-                    </ul>
-                    <a href="download.html" class="btn-primary">Get Started</a>
+            <div class="pricing-simple">
+                <div class="pricing-text">
+                    <h2>Need SSO/OIDC or commercial license?</h2>
+                    <p>DinoDB Pro adds AWS SSO authentication, Identity Center support, and commercial use rights.</p>
                 </div>
-                <div class="pricing-card featured">
-                    <h3 class="pricing-title">Commercial</h3>
-                    <!-- <div class="pricing-badge">Most Popular</div> -->
-                    <div class="pricing-price">$30</div>
-                    <div class="pricing-period">one-time license</div>
-                    <ul class="pricing-features">
-                        <li>Everything in Personal</li>
-                        <li>AWS SSO authentication</li>
-                        <li>Commercial use allowed</li>
-                    </ul>
-                    <a href="https://apps.apple.com/us/app/dinodb/id6752812446" class="btn-primary">Buy on App Store</a>
+                <div class="pricing-action">
+                    <div class="pricing-price-tag">$30 <span>one-time</span></div>
+                    <a href="https://apps.apple.com/au/app/dinodb/id6752812446" class="btn-pro" target="_blank" rel="noopener">
+                        Get Pro on App Store →
+                    </a>
                 </div>
             </div>
         </div>
@@ -180,10 +176,9 @@
                 <div class="footer-section">
                     <h3>Product</h3>
                     <ul>
-                        <li><a href="download.html">Download</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#screenshots">Screenshots</a></li>
+                        <li><a href="https://github.com/Vegasq/dinodbapp/releases/download/25.10.1/DinoDB.dmg">Download Free</a></li>
+                        <li><a href="https://apps.apple.com/au/app/dinodb/id6752812446">Pro Version</a></li>
+                        <li><a href="https://github.com/Vegasq/dinodbapp">GitHub</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -231,12 +226,41 @@
             });
         });
 
-        // Track download button clicks
+        // Track direct download links
+        document.querySelectorAll('a[href*="github.com"][href*="DinoDB.dmg"]').forEach(button => {
+            button.addEventListener('click', function(e) {
+                gtag('event', 'download_direct', {
+                    event_category: 'Download',
+                    event_label: 'Direct Download - ' + (this.id || 'unknown'),
+                    value: 1
+                });
+            });
+        });
+
+        // Track download page navigation
         document.querySelectorAll('a[href="download.html"]').forEach(button => {
             button.addEventListener('click', function(e) {
-                gtag('event', 'click', {
+                gtag('event', 'navigate_download', {
                     event_category: 'Download',
-                    event_label: 'Download Button',
+                    event_label: 'Download Page Navigation',
+                    value: 1
+                });
+            });
+        });
+
+        // Copy curl command to clipboard
+        document.querySelectorAll('.quick-install code').forEach(code => {
+            code.style.cursor = 'pointer';
+            code.title = 'Click to copy';
+            code.addEventListener('click', function() {
+                navigator.clipboard.writeText(this.textContent);
+                const original = this.textContent;
+                this.textContent = 'Copied!';
+                setTimeout(() => { this.textContent = original; }, 2000);
+
+                gtag('event', 'copy_curl', {
+                    event_category: 'Engagement',
+                    event_label: 'Curl Command Copied',
                     value: 1
                 });
             });
